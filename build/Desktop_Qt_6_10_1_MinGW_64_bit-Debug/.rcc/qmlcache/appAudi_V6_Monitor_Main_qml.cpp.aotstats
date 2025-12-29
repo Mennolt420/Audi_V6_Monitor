@@ -1,0 +1,455 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 81,
+                            "functionName": "rpm",
+                            "line": 15,
+                            "message": "Cannot retrieve a non-object type by ID: rpmSlider"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 25,
+                            "durationMicroseconds": 18,
+                            "functionName": "speed",
+                            "line": 16,
+                            "message": "Cannot retrieve a non-object type by ID: speedSlider"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 107,
+                            "functionName": "intakePowerMode",
+                            "line": 19,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 56,
+                            "functionName": "exhaustLoud",
+                            "line": 20,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 41,
+                            "functionName": "fill",
+                            "line": 24,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 29,
+                            "functionName": "centerIn",
+                            "line": 40,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 16,
+                            "functionName": "value",
+                            "line": 45,
+                            "message": "Cannot access value for name rpm"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 26,
+                            "functionName": "centerIn",
+                            "line": 62,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 35,
+                            "functionName": "alignment",
+                            "line": 70,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 33,
+                            "functionName": "alignment",
+                            "line": 80,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 40,
+                            "functionName": "color",
+                            "line": 83,
+                            "message": "Cannot load property audiRed from QQuickItem::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 51,
+                            "durationMicroseconds": 41,
+                            "functionName": "horizontalCenter",
+                            "line": 85,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 31,
+                            "durationMicroseconds": 33,
+                            "functionName": "text",
+                            "line": 88,
+                            "message": "Cannot access value for name intakePowerMode"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 42,
+                            "functionName": "color",
+                            "line": 89,
+                            "message": "Cannot access value for name intakePowerMode"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 51,
+                            "durationMicroseconds": 36,
+                            "functionName": "horizontalCenter",
+                            "line": 93,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 34,
+                            "functionName": "alignment",
+                            "line": 100,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 27,
+                            "functionName": "alignment",
+                            "line": 104,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 30,
+                            "functionName": "color",
+                            "line": 107,
+                            "message": "Cannot load property audiRed from QQuickItem::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 51,
+                            "durationMicroseconds": 33,
+                            "functionName": "horizontalCenter",
+                            "line": 109,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 31,
+                            "durationMicroseconds": 18,
+                            "functionName": "text",
+                            "line": 112,
+                            "message": "Cannot access value for name exhaustLoud"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 37,
+                            "functionName": "color",
+                            "line": 113,
+                            "message": "Cannot access value for name exhaustLoud"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 51,
+                            "durationMicroseconds": 34,
+                            "functionName": "horizontalCenter",
+                            "line": 117,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 10,
+                            "functionName": "value",
+                            "line": 125,
+                            "message": "Cannot access value for name speed"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 25,
+                            "durationMicroseconds": 38,
+                            "functionName": "bottom",
+                            "line": 134,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 30,
+                            "functionName": "horizontalCenter",
+                            "line": 136,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 19,
+                            "functionName": "fill",
+                            "line": 145,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 24,
+                            "functionName": "text",
+                            "line": 152,
+                            "message": "Cannot access value for name rpm"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 11,
+                            "functionName": "text",
+                            "line": 170,
+                            "message": "Cannot access value for name speed"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 21,
+                            "durationMicroseconds": 43,
+                            "functionName": "radius",
+                            "line": 201,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 38,
+                            "functionName": "fill",
+                            "line": 200,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 21,
+                            "durationMicroseconds": 31,
+                            "functionName": "radius",
+                            "line": 219,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 17,
+                            "functionName": "fill",
+                            "line": 217,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 38,
+                            "durationMicroseconds": 21,
+                            "functionName": "range",
+                            "line": 227,
+                            "message": "Cannot access value for name maxAngle"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 43,
+                            "functionName": "step",
+                            "line": 228,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 45,
+                            "durationMicroseconds": 20,
+                            "functionName": "currentAngle",
+                            "line": 229,
+                            "message": "Cannot access value for name minAngle"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 18,
+                            "functionName": "rotation",
+                            "line": 230,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 18,
+                            "functionName": "fill",
+                            "line": 226,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 35,
+                            "functionName": "horizontalCenter",
+                            "line": 236,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 55,
+                            "functionName": "top",
+                            "line": 237,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 224,
+                            "functionName": "text",
+                            "line": 242,
+                            "message": "Cannot access value for name isRpm"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 54,
+                            "functionName": "rotation",
+                            "line": 251,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 35,
+                            "functionName": "horizontalCenter",
+                            "line": 248,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 27,
+                            "functionName": "top",
+                            "line": 249,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 22,
+                            "durationMicroseconds": 11,
+                            "functionName": "visible",
+                            "line": 257,
+                            "message": "Cannot access value for name isRpm"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 20,
+                            "functionName": "fill",
+                            "line": 258,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 31,
+                            "functionName": "capStyle",
+                            "line": 263,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 56,
+                            "functionName": "rotation",
+                            "line": 277,
+                            "message": "Cannot access value for name minAngle"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 22,
+                            "functionName": "fill",
+                            "line": 276,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 39,
+                            "functionName": "type",
+                            "line": 283,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 57,
+                            "functionName": "horizontalCenter",
+                            "line": 292,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 29,
+                            "functionName": "bottom",
+                            "line": 293,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 18,
+                            "functionName": "centerIn",
+                            "line": 305,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 11,
+                            "functionName": "text",
+                            "line": 308,
+                            "message": "Cannot access value for name label"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 31,
+                            "functionName": "horizontalCenter",
+                            "line": 312,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 29,
+                            "durationMicroseconds": 28,
+                            "functionName": "bottom",
+                            "line": 313,
+                            "message": ""
+                        }
+                    ],
+                    "filePath": "C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/Main.qml"
+                }
+            ],
+            "moduleId": "Audi_V6_Monitor(appAudi_V6_Monitor)"
+        }
+    ]
+}

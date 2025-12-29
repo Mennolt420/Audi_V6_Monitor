@@ -1,0 +1,9 @@
+module Audi_V6_Monitor
+typeinfo appAudi_V6_Monitor.qmltypes
+depends QtQuick.Controls
+depends QtQuick.Layouts
+depends QtQuick.Shapes
+prefer :/qt/qml/Audi_V6_Monitor/
+Main 254.0 Main.qml
+depends QtQuick
+

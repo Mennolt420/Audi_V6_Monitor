@@ -1,0 +1,205 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-35825828a9fbb0091bfa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Audi_V6_Monitor",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-cb44ed9466e6affc4c03.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-c2e5e0b0075389ae57bc.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-1c772047de4fafc9d529.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-4e8df3387242bb40e337.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-2398527e7c67e952f5c0.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor-Debug-1772f0ba74e6331821ce.json",
+					"name" : "appAudi_V6_Monitor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_autogen-Debug-e0ade974fb6d022a43fe.json",
+					"name" : "appAudi_V6_Monitor_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_autogen_timestamp_deps-Debug-86a2564d1d4c6fe66192.json",
+					"name" : "appAudi_V6_Monitor_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_copy_qml-Debug-83c178e62d22f1848486.json",
+					"name" : "appAudi_V6_Monitor_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_copy_res-Debug-1bd64389d1453fa81347.json",
+					"name" : "appAudi_V6_Monitor_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_qmlimportscan-Debug-2e270c5b716346e854c5.json",
+					"name" : "appAudi_V6_Monitor_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_qmllint-Debug-af0fde785e285c3492b8.json",
+					"name" : "appAudi_V6_Monitor_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_qmllint_json-Debug-85ac0f4b7cd60a8c96a2.json",
+					"name" : "appAudi_V6_Monitor_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_qmllint_module-Debug-08038a2977efe7bb68fb.json",
+					"name" : "appAudi_V6_Monitor_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appAudi_V6_Monitor_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appAudi_V6_Monitor_qmltyperegistration-Debug-430f87a6cf8c91adbaab.json",
+					"name" : "appAudi_V6_Monitor_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-ca29768f0684f0332258.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appAudi_V6_Monitor_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appAudi_V6_Monitor_aotstats_target-Debug-73c99e3591d5f7d3285c.json",
+					"name" : "module_appAudi_V6_Monitor_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

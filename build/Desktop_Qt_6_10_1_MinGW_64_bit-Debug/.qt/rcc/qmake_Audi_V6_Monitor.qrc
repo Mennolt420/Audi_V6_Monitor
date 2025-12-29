@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Audi_V6_Monitor">
+    <file alias="qmldir">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Audi_V6_Monitor/qmldir</file>
+  </qresource>
+</RCC>
+

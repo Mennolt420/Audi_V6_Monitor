@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor
+-cmake-output
+-output-file
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/qml_imports/appAudi_V6_Monitor_conf.cmake
+-importPath
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Audi_V6_Monitor
+-importPath
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.10.1/mingw_64/qml
+-qrcFiles
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/qmake_Audi_V6_Monitor.qrc
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/appAudi_V6_Monitor_raw_qml_0.qrc

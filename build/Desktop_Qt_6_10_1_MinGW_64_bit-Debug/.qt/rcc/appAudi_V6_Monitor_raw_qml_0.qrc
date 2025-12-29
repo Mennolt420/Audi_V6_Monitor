@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Audi_V6_Monitor/">
+    <file alias="Main.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/Main.qml</file>
+  </qresource>
+</RCC>
+

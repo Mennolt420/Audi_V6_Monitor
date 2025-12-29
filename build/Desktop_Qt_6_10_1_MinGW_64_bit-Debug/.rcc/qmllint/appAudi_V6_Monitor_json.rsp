@@ -1,0 +1,12 @@
+--bare
+-I
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug
+-I
+C:/Qt/6.10.1/mingw_64/qml
+--resource
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/qmake_Audi_V6_Monitor.qrc
+--resource
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/appAudi_V6_Monitor_raw_qml_0.qrc
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/Main.qml
+--json
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/appAudi_V6_Monitor_qmllint.json
