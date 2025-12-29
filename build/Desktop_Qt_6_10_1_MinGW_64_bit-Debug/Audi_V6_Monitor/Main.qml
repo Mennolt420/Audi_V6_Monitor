@@ -8,14 +8,13 @@ Window {
     width: 1920
     height: 720
     visible: true
-    title: "Audi TT 3.2 V6 - Euro Spec (280 km/h)"
+    title: "Audi TT 3.2 V6 - Manual Test Mode"
     color: "black"
 
-    // --- MOCK DATA ---
-    property int rpm: 0
-    property int speed: 0
+    // --- DATA (Nu gekoppeld aan de sliders!) ---
+    property int rpm: rpmSlider.value
+    property int speed: speedSlider.value
     property bool viewModeSport: false
-    property bool accelerating: true
 
     Item {
         id: container
@@ -36,7 +35,7 @@ Window {
             }
         }
 
-        // 2. MIDDEN SCHERM (V6 MONITOR)
+        // 2. MIDDEN SCHERM
         Item {
             id: centerScreen
             width: 800
@@ -60,24 +59,27 @@ Window {
                     anchors.centerIn: parent
                     spacing: 20
                     Text {
-                        text: "3.2 V6 QUATTRO"
-                        color: "white"
+                        text: "MANUAL TEST MODE"
+                        color: "#ffcc00"
                         font.pixelSize: 32
                         font.bold: true
                     }
-                    // Hier kunnen we later olie-temp en versnelling (DSG) tonen
                     Text {
-                        text: "DSG: D3"
-                        color: "#cc0000"
-                        font.pixelSize: 40
-                        font.bold: true
+                        text: "RPM: " + rpm
+                        color: "white"
+                        font.pixelSize: 24
+                    }
+                    Text {
+                        text: "SPD: " + speed + " km/h"
+                        color: "white"
+                        font.pixelSize: 24
                     }
                 }
             }
         }
 
         // ============================================================
-        // 3. DE TELLERS (Exact nagemaakt van foto)
+        // 3. DE TELLERS
         // ============================================================
 
         // -- RPM METER --
@@ -87,28 +89,26 @@ Window {
             label: "1/min x 1000"
             logoText: "TT"
 
-            // De reeks van de foto: 0 tot 8
-            numberArray: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            // VERANDER DIT: Gebruik echte toerentallen
+            numberArray: [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]
 
             isRedline: true
-            redlineStartIndex: 6.5 // Rood begint halverwege 6 en 7
+
+            // Dit blijft 6.1 (we kijken naar de 6e positie in de rij)
+            redlineStartIndex: 6.1
 
             width: 650
             height: 650
             y: 35
         }
 
-        // -- SNELHEIDSMETER (DE COMPLEXE 280 VERSIE) --
+        // -- SNELHEIDSMETER (280 KM/H) --
         AudiGaugeNonLinear {
             id: speedGauge
             value: speed
             label: "km/h"
-
-            // DE UNIEKE EUROPESE SCHAALVERDELING
-            // Deel 1: Stappen van 10 (0-80)
-            // Deel 2: Stappen van 20 (80-280)
+            // De Europese schaalverdeling
             numberArray: [0, 10, 20, 30, 40, 50, 60, 70, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280]
-
             isRedline: false
 
             width: 650
@@ -116,7 +116,7 @@ Window {
             y: 35
         }
 
-        // 4. STATES & ANIMATIE
+        // 4. ANIMATIE STATES
         states: [
             State {
                 name: "classic"
@@ -155,12 +155,12 @@ Window {
             }
         }
 
-        // 5. VIEW KNOP
+        // 5. VIEW KNOP (Boven het testpaneel)
         Button {
-            text: "VIEW"
+            text: "VIEW MODE"
             anchors.bottom: parent.bottom
+            anchors.bottomMargin: 160 // Ruimte voor sliders
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottomMargin: 30
             onClicked: viewModeSport = !viewModeSport
             background: Rectangle {
                 color: "transparent"
@@ -176,28 +176,80 @@ Window {
         }
     }
 
-    // --- SIMULATIE ---
-    Timer {
-        running: false
-        repeat: true
-        interval: 16
-        onTriggered: {
-            if (accelerating) {
-                rpm += 45
-                speed += 0.8
-                if (rpm >= 7200)
-                    accelerating = false
-            } else {
-                rpm -= 60
-                speed -= 1.2
-                if (rpm <= 800)
-                    accelerating = true
+    // ============================================================
+    // NIEUW: HET TEST PANEEL (Sliders)
+    // ============================================================
+    Rectangle {
+        id: testPanel
+        width: 1000
+        height: 120
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        anchors.horizontalCenter: parent.horizontalCenter
+        color: "#222222"
+        radius: 10
+        border.color: "#555555"
+        border.width: 2
+        opacity: 0.9
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 20
+
+            // RPM Slider
+            RowLayout {
+                Layout.fillWidth: true
+                Text {
+                    text: "RPM (0-8000)"
+                    color: "white"
+                    font.bold: true
+                    width: 100
+                }
+                Slider {
+                    id: rpmSlider
+                    Layout.fillWidth: true
+                    from: 0
+                    to: 8000
+                    stepSize: 10
+                    value: 0
+                }
+                Text {
+                    text: rpmSlider.value.toFixed(0)
+                    color: "#ff3300"
+                    font.bold: true
+                    width: 50
+                }
+            }
+
+            // Speed Slider
+            RowLayout {
+                Layout.fillWidth: true
+                Text {
+                    text: "SPEED (0-280)"
+                    color: "white"
+                    font.bold: true
+                    width: 100
+                }
+                Slider {
+                    id: speedSlider
+                    Layout.fillWidth: true
+                    from: 0
+                    to: 280
+                    stepSize: 1
+                    value: 0
+                }
+                Text {
+                    text: speedSlider.value.toFixed(0)
+                    color: "#ff3300"
+                    font.bold: true
+                    width: 50
+                }
             }
         }
     }
 
     // ============================================================
-    // COMPONENT: SLIMME NON-LINEAIRE METER
+    // COMPONENT (Jouw werkende versie)
     // ============================================================
     component AudiGaugeNonLinear: Item {
         property real value: 0
@@ -205,15 +257,14 @@ Window {
         property string label: ""
         property string logoText: ""
         property bool isRedline: false
-        property real redlineStartIndex: 0 // Waar begint rood (op basis van index of waarde)
+        property real redlineStartIndex: 0
 
-        // De hoek van de meter (van 7 uur tot 5 uur is ong 260 graden)
         property real startAngle: -130
         property real totalSweep: 260
 
         transformOrigin: Item.Center
 
-        // 1. Digitaal Midden
+        // 1. Midden
         Column {
             anchors.centerIn: parent
             Text {
@@ -245,33 +296,33 @@ Window {
             }
         }
 
-        // 2. Cijfers en Streepjes (Dynamisch op basis van Array)
+        // 2. Schaalverdeling
         Repeater {
             model: numberArray.length
             Item {
                 anchors.fill: parent
-                // Omdat de afstand tussen elk cijfer op de fysieke plaat gelijk is
-                // (ook al is het sprongetje van waarde verschillend, bijv 10 vs 20),
-                // kunnen we de hoek lineair verdelen over de *hoeveelheid* cijfers.
                 property real anglePerStep: totalSweep / (numberArray.length - 1)
                 rotation: startAngle + (index * anglePerStep)
 
-                // Groot streepje bij het cijfer
                 Rectangle {
                     width: 4
                     height: 20
-                    color: "white"
+                    color: (isRedline
+                            && index >= redlineStartIndex) ? "#cc0000" : "white"
                     anchors.top: parent.top
                     anchors.topMargin: 20
                     anchors.horizontalCenter: parent.horizontalCenter
                     antialiasing: true
                 }
-
                 // Het Cijfer zelf
                 Text {
-                    text: numberArray[index]
+                    // HIER ZIT DE FIX:
+                    // Is het een RPM meter (isRedline)? Deel het getal dan door 1000.
+                    // Zo wordt 1000 -> 1, 8000 -> 8.
+                    text: isRedline ? numberArray[index] / 1000 : numberArray[index]
+
                     color: (isRedline
-                            && index >= 6) ? "#cc0000" : "#aaaaaa" // Rood vanaf 6000 rpm
+                            && index >= redlineStartIndex) ? "#cc0000" : "#aaaaaa"
                     font.pixelSize: 26
                     font.bold: true
                     font.italic: true
@@ -281,15 +332,11 @@ Window {
                     anchors.horizontalCenter: parent.horizontalCenter
                     rotation: -parent.rotation
                 }
-
-                // Klein tussen-streepje (Halverwege naar het volgende cijfer)
-                // We tekenen dit niet bij het allerlaatste cijfer
                 Rectangle {
                     visible: index < numberArray.length - 1
                     width: 2
                     height: 12
                     color: "white"
-                    // Draai hem een halve stap verder
                     transform: Rotation {
                         origin.x: 0
                         origin.y: parent.height / 2
@@ -302,7 +349,7 @@ Window {
             }
         }
 
-        // 3. Rode Boog (RPM Redline)
+        // 3. Rode Boog
         Shape {
             visible: isRedline
             anchors.fill: parent
@@ -317,43 +364,29 @@ Window {
                     centerY: height / 2
                     radiusX: (width / 2) - 20
                     radiusY: (height / 2) - 20
-                    // Rood begint bij 6500 toeren.
-                    // 6500 is index 6.5 in onze array van 9 stappen (0-8)
-                    // Hoek berekening: Start + (indexFractie / totaalIndex * TotaalHoek)
-                    startAngle: -8 // Even handmatig gefinetuned voor de look
+                    startAngle: -8
                     sweepAngle: 48
                 }
             }
         }
 
-        // 4. De Slimme Naald
+        // 4. Naald
         Item {
             anchors.fill: parent
 
-            // DE MAGIE: Deze functie zorgt dat de naald sneller/langzamer gaat
-            // afhankelijk van waar hij op de schaal is (0-80 vs 80-280)
             function calculateRotation(val) {
                 var arr = numberArray
-                // Beveiliging voor min/max
                 if (val <= arr[0])
                     return startAngle
                 if (val >= arr[arr.length - 1])
                     return startAngle + totalSweep
 
-                // Zoek tussen welke twee schaal-cijfers de waarde zit
                 for (var i = 0; i < arr.length - 1; i++) {
                     var low = arr[i]
                     var high = arr[i + 1]
-
                     if (val >= low && val <= high) {
-                        // Hoe ver zijn we tussen low en high? (0.0 tot 1.0)
                         var fraction = (val - low) / (high - low)
-
-                        // Omdat elk cijfer op het scherm even ver uit elkaar staat,
-                        // is de hoek per 'stap' in de array constant.
                         var anglePerIndex = totalSweep / (arr.length - 1)
-
-                        // Positie = Start + (aantal hele stappen) + (fractie van huidige stap)
                         return startAngle + (i * anglePerIndex) + (fraction * anglePerIndex)
                     }
                 }
@@ -362,13 +395,13 @@ Window {
 
             rotation: calculateRotation(value)
 
+            // Zet deze animatie iets sneller voor directe respons op je muis
             Behavior on rotation {
                 SmoothedAnimation {
-                    velocity: 1500
+                    velocity: 2000
                 }
             }
 
-            // De Tip (Naald indicator)
             Rectangle {
                 width: 14
                 height: 35
