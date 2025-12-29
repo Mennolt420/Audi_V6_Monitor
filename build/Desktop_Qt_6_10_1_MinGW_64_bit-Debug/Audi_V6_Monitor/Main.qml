@@ -4,314 +4,381 @@ import QtQuick.Layouts
 import QtQuick.Shapes
 
 Window {
+    id: mainWindow
     width: 1920
     height: 720
     visible: true
-    title: "Audi TT 8J - Manual Test"
-    color: "#050505"
+    title: "Audi TT 3.2 V6 - Euro Spec (280 km/h)"
+    color: "black"
 
-    // --- 1. AANGEPASTE DATA (Luistert nu naar de sliders) ---
-    // Math.round zorgt voor hele getallen (geen 4200.53 toeren)
-    property int rpm: Math.round(rpmSlider.value)
-    property int speed: Math.round(speedSlider.value)
+    // --- MOCK DATA ---
+    property int rpm: 0
+    property int speed: 0
+    property bool viewModeSport: false
+    property bool accelerating: true
 
-    // Logica blijft hetzelfde
-    property bool intakePowerMode: rpm > 4200
-    property bool exhaustLoud: rpm > 3500
-
-    // --- ACHTERGROND ---
-    Rectangle {
+    Item {
+        id: container
         anchors.fill: parent
-        color: "transparent"
-        gradient: Gradient {
-            GradientStop {
-                position: 0.0
-                color: "#1a1a1a"
-            }
-            GradientStop {
-                position: 1.0
-                color: "#000000"
-            }
-        }
-    }
 
-    // --- DE TELLERS (Blijft hetzelfde) ---
-    RowLayout {
-        anchors.centerIn: parent
-        spacing: 80
-
-        TTGauge {
-            id: rpmGauge
-            value: rpm
-            maxValue: 8000
-            label: "1/min x 1000"
-            isRpm: true
-        }
-
-        // Het FIS scherm (Midden)
-        Rectangle {
-            Layout.preferredWidth: 400
-            Layout.preferredHeight: 480
-            color: "#1a0000"
-            border.color: "#333333"
-            border.width: 2
-            radius: 6
-            property string audiRed: "#ff3300"
-
-            ColumnLayout {
-                anchors.centerIn: parent
-                spacing: 15
-
-                Text {
-                    text: "MANUAL TEST"
-                    color: "#ffcc00"
-                    font.pixelSize: 22
-                    font.bold: true
-                    Layout.alignment: Qt.AlignHCenter
-                }
-                Rectangle {
-                    height: 2
-                    width: 320
-                    color: "#cc0000"
-                }
-
-                Column {
-                    spacing: 5
-                    Layout.alignment: Qt.AlignHCenter
-                    Text {
-                        text: "INTAKE RUNNER"
-                        color: parent.parent.audiRed
-                        font.pixelSize: 18
-                        anchors.horizontalCenter: parent.horizontalCenter
-                    }
-                    Text {
-                        text: intakePowerMode ? "SHORT [POWER]" : "LONG [TORQUE]"
-                        color: intakePowerMode ? "white" : parent.parent.audiRed
-                        font.pixelSize: 26
-                        font.bold: true
-                        font.family: "Courier"
-                        anchors.horizontalCenter: parent.horizontalCenter
-                    }
-                }
-                Rectangle {
-                    height: 1
-                    width: 200
-                    color: "#cc0000"
-                    Layout.alignment: Qt.AlignHCenter
-                }
-                Column {
-                    spacing: 5
-                    Layout.alignment: Qt.AlignHCenter
-                    Text {
-                        text: "EXHAUST FLAP"
-                        color: parent.parent.audiRed
-                        font.pixelSize: 18
-                        anchors.horizontalCenter: parent.horizontalCenter
-                    }
-                    Text {
-                        text: exhaustLoud ? "OPEN" : "CLOSED"
-                        color: exhaustLoud ? "white" : parent.parent.audiRed
-                        font.pixelSize: 26
-                        font.bold: true
-                        font.family: "Courier"
-                        anchors.horizontalCenter: parent.horizontalCenter
-                    }
-                }
-            }
-        }
-
-        TTGauge {
-            id: speedGauge
-            value: speed
-            maxValue: 280
-            label: "km/h"
-            isRpm: false
-        }
-    }
-
-    // --- 2. HET TEST PANEEL (NIEUW) ---
-    Rectangle {
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 20
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: 800
-        height: 120
-        color: "#222222" // Donkergrijs zodat je het ziet
-        radius: 10
-        border.color: "white"
-        opacity: 0.9
-
-        ColumnLayout {
-            anchors.fill: parent
-            anchors.margins: 20
-
-            // Slider voor RPM
-            RowLayout {
-                Layout.fillWidth: true
-                Text {
-                    text: "RPM: " + rpm
-                    color: "white"
-                    font.bold: true
-                    width: 80
-                }
-                Slider {
-                    id: rpmSlider
-                    Layout.fillWidth: true
-                    from: 0
-                    to: 8000
-                    value: 800 // Startwaarde
-                }
-            }
-
-            // Slider voor Snelheid
-            RowLayout {
-                Layout.fillWidth: true
-                Text {
-                    text: "KM/H: " + speed
-                    color: "white"
-                    font.bold: true
-                    width: 80
-                }
-                Slider {
-                    id: speedSlider
-                    Layout.fillWidth: true
-                    from: 0
-                    to: 280
-                    value: 0
-                }
-            }
-        }
-    }
-
-    // --- 3. DE GAUGE COMPONENT (Jouw gefixte versie) ---
-    component TTGauge: Item {
-        property real value: 0
-        property real maxValue: 100
-        property string label: ""
-        property bool isRpm: false
-
-        property real minAngle: -135
-        property real maxAngle: 135
-
-        width: 500
-        height: 500
-
+        // 1. ACHTERGROND
         Rectangle {
             anchors.fill: parent
-            radius: width / 2
-            color: "#000000"
-            border.width: 12
-            border.color: "#cccccc"
             gradient: Gradient {
                 GradientStop {
                     position: 0.0
-                    color: "#555555"
+                    color: "#050505"
                 }
                 GradientStop {
                     position: 1.0
-                    color: "#111111"
+                    color: "#000000"
                 }
             }
         }
-        Rectangle {
-            anchors.fill: parent
-            anchors.margins: 14
-            radius: width / 2
-            color: "#080808"
+
+        // 2. MIDDEN SCHERM (V6 MONITOR)
+        Item {
+            id: centerScreen
+            width: 800
+            height: 600
+            anchors.centerIn: parent
+            opacity: viewModeSport ? 1.0 : 0.0
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 800
+                }
+            }
+
+            Rectangle {
+                anchors.fill: parent
+                anchors.margins: 40
+                color: "#111111"
+                border.color: "#333333"
+                radius: 15
+
+                ColumnLayout {
+                    anchors.centerIn: parent
+                    spacing: 20
+                    Text {
+                        text: "3.2 V6 QUATTRO"
+                        color: "white"
+                        font.pixelSize: 32
+                        font.bold: true
+                    }
+                    // Hier kunnen we later olie-temp en versnelling (DSG) tonen
+                    Text {
+                        text: "DSG: D3"
+                        color: "#cc0000"
+                        font.pixelSize: 40
+                        font.bold: true
+                    }
+                }
+            }
         }
 
+        // ============================================================
+        // 3. DE TELLERS (Exact nagemaakt van foto)
+        // ============================================================
+
+        // -- RPM METER --
+        AudiGaugeNonLinear {
+            id: rpmGauge
+            value: rpm
+            label: "1/min x 1000"
+            logoText: "TT"
+
+            // De reeks van de foto: 0 tot 8
+            numberArray: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+            isRedline: true
+            redlineStartIndex: 6.5 // Rood begint halverwege 6 en 7
+
+            width: 650
+            height: 650
+            y: 35
+        }
+
+        // -- SNELHEIDSMETER (DE COMPLEXE 280 VERSIE) --
+        AudiGaugeNonLinear {
+            id: speedGauge
+            value: speed
+            label: "km/h"
+
+            // DE UNIEKE EUROPESE SCHAALVERDELING
+            // Deel 1: Stappen van 10 (0-80)
+            // Deel 2: Stappen van 20 (80-280)
+            numberArray: [0, 10, 20, 30, 40, 50, 60, 70, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280]
+
+            isRedline: false
+
+            width: 650
+            height: 650
+            y: 35
+        }
+
+        // 4. STATES & ANIMATIE
+        states: [
+            State {
+                name: "classic"
+                when: !viewModeSport
+                PropertyChanges {
+                    target: rpmGauge
+                    x: 150
+                    scale: 1.0
+                }
+                PropertyChanges {
+                    target: speedGauge
+                    x: 1120
+                    scale: 1.0
+                }
+            },
+            State {
+                name: "sport"
+                when: viewModeSport
+                PropertyChanges {
+                    target: rpmGauge
+                    x: -50
+                    scale: 0.6
+                }
+                PropertyChanges {
+                    target: speedGauge
+                    x: 1320
+                    scale: 0.6
+                }
+            }
+        ]
+        transitions: Transition {
+            NumberAnimation {
+                properties: "x, scale"
+                duration: 850
+                easing.type: Easing.InOutQuart
+            }
+        }
+
+        // 5. VIEW KNOP
+        Button {
+            text: "VIEW"
+            anchors.bottom: parent.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottomMargin: 30
+            onClicked: viewModeSport = !viewModeSport
+            background: Rectangle {
+                color: "transparent"
+                border.color: "white"
+                radius: 4
+            }
+            contentItem: Text {
+                text: parent.text
+                color: "white"
+                font.bold: true
+                padding: 10
+            }
+        }
+    }
+
+    // --- SIMULATIE ---
+    Timer {
+        running: false
+        repeat: true
+        interval: 16
+        onTriggered: {
+            if (accelerating) {
+                rpm += 45
+                speed += 0.8
+                if (rpm >= 7200)
+                    accelerating = false
+            } else {
+                rpm -= 60
+                speed -= 1.2
+                if (rpm <= 800)
+                    accelerating = true
+            }
+        }
+    }
+
+    // ============================================================
+    // COMPONENT: SLIMME NON-LINEAIRE METER
+    // ============================================================
+    component AudiGaugeNonLinear: Item {
+        property real value: 0
+        property var numberArray: []
+        property string label: ""
+        property string logoText: ""
+        property bool isRedline: false
+        property real redlineStartIndex: 0 // Waar begint rood (op basis van index of waarde)
+
+        // De hoek van de meter (van 7 uur tot 5 uur is ong 260 graden)
+        property real startAngle: -130
+        property real totalSweep: 260
+
+        transformOrigin: Item.Center
+
+        // 1. Digitaal Midden
+        Column {
+            anchors.centerIn: parent
+            Text {
+                text: Math.round(value)
+                color: "white"
+                font.pixelSize: 110
+                font.bold: true
+                font.family: "Arial"
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            Text {
+                text: label
+                color: "#888888"
+                font.pixelSize: 24
+                font.italic: true
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            Text {
+                text: logoText
+                visible: logoText !== ""
+                color: "white"
+                font.pixelSize: 32
+                font.bold: true
+                font.italic: true
+                style: Text.Outline
+                styleColor: "#cc0000"
+                anchors.horizontalCenter: parent.horizontalCenter
+                topPadding: 10
+            }
+        }
+
+        // 2. Cijfers en Streepjes (Dynamisch op basis van Array)
         Repeater {
-            model: 9
+            model: numberArray.length
             Item {
                 anchors.fill: parent
-                property real range: maxAngle - minAngle
-                property real step: range / 8
-                property real currentAngle: minAngle + (index * step)
-                rotation: currentAngle
+                // Omdat de afstand tussen elk cijfer op de fysieke plaat gelijk is
+                // (ook al is het sprongetje van waarde verschillend, bijv 10 vs 20),
+                // kunnen we de hoek lineair verdelen over de *hoeveelheid* cijfers.
+                property real anglePerStep: totalSweep / (numberArray.length - 1)
+                rotation: startAngle + (index * anglePerStep)
 
+                // Groot streepje bij het cijfer
                 Rectangle {
-                    width: 6
-                    height: 25
+                    width: 4
+                    height: 20
                     color: "white"
-                    anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: 30
+                    anchors.topMargin: 20
+                    anchors.horizontalCenter: parent.horizontalCenter
                     antialiasing: true
                 }
+
+                // Het Cijfer zelf
                 Text {
-                    text: isRpm ? index : index * 35
-                    color: "white"
-                    font.pixelSize: 32
+                    text: numberArray[index]
+                    color: (isRedline
+                            && index >= 6) ? "#cc0000" : "#aaaaaa" // Rood vanaf 6000 rpm
+                    font.pixelSize: 26
                     font.bold: true
                     font.italic: true
                     font.family: "Arial"
-                    anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: 65
+                    anchors.topMargin: 55
+                    anchors.horizontalCenter: parent.horizontalCenter
                     rotation: -parent.rotation
+                }
+
+                // Klein tussen-streepje (Halverwege naar het volgende cijfer)
+                // We tekenen dit niet bij het allerlaatste cijfer
+                Rectangle {
+                    visible: index < numberArray.length - 1
+                    width: 2
+                    height: 12
+                    color: "white"
+                    // Draai hem een halve stap verder
+                    transform: Rotation {
+                        origin.x: 0
+                        origin.y: parent.height / 2
+                        angle: anglePerStep / 2
+                    }
+                    anchors.top: parent.top
+                    anchors.topMargin: 20
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
         }
 
+        // 3. Rode Boog (RPM Redline)
         Shape {
-            visible: isRpm
+            visible: isRedline
             anchors.fill: parent
+            opacity: 0.8
             ShapePath {
                 strokeColor: "#cc0000"
-                strokeWidth: 10
+                strokeWidth: 8
                 fillColor: "transparent"
                 capStyle: ShapePath.FlatCap
                 PathAngleArc {
-                    centerX: 250
-                    centerY: 250
-                    radiusX: 200
-                    radiusY: 200
-                    startAngle: 0
-                    sweepAngle: 45
+                    centerX: width / 2
+                    centerY: height / 2
+                    radiusX: (width / 2) - 20
+                    radiusY: (height / 2) - 20
+                    // Rood begint bij 6500 toeren.
+                    // 6500 is index 6.5 in onze array van 9 stappen (0-8)
+                    // Hoek berekening: Start + (indexFractie / totaalIndex * TotaalHoek)
+                    startAngle: -8 // Even handmatig gefinetuned voor de look
+                    sweepAngle: 48
                 }
             }
         }
 
+        // 4. De Slimme Naald
         Item {
             anchors.fill: parent
-            rotation: minAngle + (Math.min(
-                                      value,
-                                      maxValue) / maxValue) * (maxAngle - minAngle)
+
+            // DE MAGIE: Deze functie zorgt dat de naald sneller/langzamer gaat
+            // afhankelijk van waar hij op de schaal is (0-80 vs 80-280)
+            function calculateRotation(val) {
+                var arr = numberArray
+                // Beveiliging voor min/max
+                if (val <= arr[0])
+                    return startAngle
+                if (val >= arr[arr.length - 1])
+                    return startAngle + totalSweep
+
+                // Zoek tussen welke twee schaal-cijfers de waarde zit
+                for (var i = 0; i < arr.length - 1; i++) {
+                    var low = arr[i]
+                    var high = arr[i + 1]
+
+                    if (val >= low && val <= high) {
+                        // Hoe ver zijn we tussen low en high? (0.0 tot 1.0)
+                        var fraction = (val - low) / (high - low)
+
+                        // Omdat elk cijfer op het scherm even ver uit elkaar staat,
+                        // is de hoek per 'stap' in de array constant.
+                        var anglePerIndex = totalSweep / (arr.length - 1)
+
+                        // Positie = Start + (aantal hele stappen) + (fractie van huidige stap)
+                        return startAngle + (i * anglePerIndex) + (fraction * anglePerIndex)
+                    }
+                }
+                return startAngle
+            }
+
+            rotation: calculateRotation(value)
+
             Behavior on rotation {
                 SmoothedAnimation {
-                    velocity: 2000
-                    easing.type: Easing.OutQuad
+                    velocity: 1500
                 }
-            } // Iets sneller gezet
-
-            Rectangle {
-                width: 8
-                height: 180
-                color: "#ff0000"
-                antialiasing: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.verticalCenter
-                anchors.bottomMargin: -20
             }
-        }
 
-        Rectangle {
-            width: 44
-            height: 44
-            radius: 22
-            color: "#111111"
-            border.color: "#666666"
-            border.width: 2
-            anchors.centerIn: parent
-        }
-        Text {
-            text: label
-            color: "#aaaaaa"
-            font.italic: true
-            font.pixelSize: 20
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 110
+            // De Tip (Naald indicator)
+            Rectangle {
+                width: 14
+                height: 35
+                color: "#ff0000"
+                radius: 2
+                anchors.top: parent.top
+                anchors.topMargin: 12
+                anchors.horizontalCenter: parent.horizontalCenter
+                layer.enabled: true
+            }
         }
     }
 }
