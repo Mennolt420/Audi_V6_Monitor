@@ -5,5 +5,11 @@ depends QtQuick.Layouts
 depends QtQuick.Shapes
 prefer :/qt/qml/Audi_V6_Monitor/
 Main 254.0 Main.qml
+AudiGauge 254.0 AudiGauge.qml
+InfoBackground 254.0 InfoBackground.qml
+TopBar 254.0 TopBar.qml
+TabCar 254.0 TabCar.qml
+TabMedia 254.0 TabMedia.qml
+TabNavigation 254.0 TabNavigation.qml
 depends QtQuick
 

@@ -349,11 +349,20 @@ Qt6GuiTools_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6GuiTools
 //The directory containing a CMake configuration file for Qt6Gui.
 Qt6Gui_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6Gui
 
+//The directory containing a CMake configuration file for Qt6Location.
+Qt6Location_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6Location
+
 //The directory containing a CMake configuration file for Qt6Network.
 Qt6Network_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6Network
 
 //The directory containing a CMake configuration file for Qt6OpenGL.
 Qt6OpenGL_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6OpenGL
+
+//The directory containing a CMake configuration file for Qt6PositioningQuick.
+Qt6PositioningQuick_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6PositioningQuick
+
+//The directory containing a CMake configuration file for Qt6Positioning.
+Qt6Positioning_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6Positioning
 
 //The directory containing a CMake configuration file for Qt6QmlAssetDownloader.
 Qt6QmlAssetDownloader_DIR:PATH=C:/Qt/6.10.1/mingw_64/lib/cmake/Qt6QmlAssetDownloader
@@ -814,6 +823,8 @@ QT_FEATURE_graphicsframecapture:INTERNAL=OFF
 QT_FEATURE_gssapi:INTERNAL=OFF
 //Qt feature: gui (from target Qt6::Core)
 QT_FEATURE_gui:INTERNAL=ON
+//Qt feature: gypsy (from target Qt6::Positioning)
+QT_FEATURE_gypsy:INTERNAL=OFF
 //Qt feature: harfbuzz (from target Qt6::Gui)
 QT_FEATURE_harfbuzz:INTERNAL=ON
 //Qt feature: highdpiscaling (from target Qt6::Gui)
@@ -1347,6 +1358,8 @@ QT_FEATURE_whatsthis:INTERNAL=ON
 QT_FEATURE_wheelevent:INTERNAL=ON
 //Qt feature: widgets (from target Qt6::Core)
 QT_FEATURE_widgets:INTERNAL=ON
+//Qt feature: winrt_geolocation (from target Qt6::Positioning)
+QT_FEATURE_winrt_geolocation:INTERNAL=OFF
 //Qt feature: winsdkicu (from target Qt6::Core)
 QT_FEATURE_winsdkicu:INTERNAL=OFF
 //Qt feature: x86intrin (from target Qt6::Core)

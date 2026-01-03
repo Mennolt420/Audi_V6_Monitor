@@ -1,0 +1,47 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 118,
+                            "functionName": "currentIndex",
+                            "line": 19,
+                            "message": "Cannot access value for name activeTab"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 88,
+                            "functionName": "fill",
+                            "line": 18,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 22,
+                            "durationMicroseconds": 112,
+                            "functionName": "oilTemp",
+                            "line": 23,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 44,
+                            "functionName": "range",
+                            "line": 24,
+                            "message": ""
+                        }
+                    ],
+                    "filePath": "C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/InfoBackground.qml"
+                }
+            ],
+            "moduleId": "Audi_V6_Monitor(appAudi_V6_Monitor)"
+        }
+    ]
+}

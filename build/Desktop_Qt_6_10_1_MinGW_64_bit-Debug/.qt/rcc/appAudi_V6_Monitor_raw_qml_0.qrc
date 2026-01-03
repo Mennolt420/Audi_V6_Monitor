@@ -1,6 +1,12 @@
 <RCC>
   <qresource prefix="/qt/qml/Audi_V6_Monitor/">
     <file alias="Main.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/Main.qml</file>
+    <file alias="AudiGauge.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/AudiGauge.qml</file>
+    <file alias="InfoBackground.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/InfoBackground.qml</file>
+    <file alias="TopBar.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TopBar.qml</file>
+    <file alias="TabCar.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TabCar.qml</file>
+    <file alias="TabMedia.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TabMedia.qml</file>
+    <file alias="TabNavigation.qml">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TabNavigation.qml</file>
   </qresource>
 </RCC>
 

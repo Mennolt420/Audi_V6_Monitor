@@ -8,5 +8,11 @@ C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit
 --resource
 C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/appAudi_V6_Monitor_raw_qml_0.qrc
 C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/Main.qml
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/AudiGauge.qml
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/InfoBackground.qml
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TopBar.qml
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TabCar.qml
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TabMedia.qml
+C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/TabNavigation.qml
 --json
 C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/appAudi_V6_Monitor_qmllint.json
