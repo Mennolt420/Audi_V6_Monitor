@@ -6,19 +6,51 @@
                 {
                     "entries": [
                         {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 259,
+                            "functionName": "gX",
+                            "line": 12,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 128,
+                            "functionName": "gY",
+                            "line": 13,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 69,
+                            "durationMicroseconds": 155,
+                            "functionName": "onTriggered",
+                            "line": 16,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 111,
+                            "durationMicroseconds": 39,
                             "functionName": "centerIn",
-                            "line": 10,
+                            "line": 19,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 45,
+                            "durationMicroseconds": 43,
                             "functionName": "style",
-                            "line": 18,
+                            "line": 26,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 26,
+                            "functionName": "alignment",
+                            "line": 25,
                             "message": ""
                         },
                         {
@@ -26,71 +58,71 @@
                             "column": 31,
                             "durationMicroseconds": 33,
                             "functionName": "alignment",
-                            "line": 17,
+                            "line": 32,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 30,
+                            "durationMicroseconds": 20,
+                            "functionName": "fill",
+                            "line": 36,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 23,
+                            "functionName": "x",
+                            "line": 70,
+                            "message": "Cannot access value for name gX"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 20,
+                            "functionName": "y",
+                            "line": 71,
+                            "message": "Cannot access value for name gY"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 29,
                             "functionName": "alignment",
-                            "line": 23,
+                            "line": 84,
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 36,
-                            "durationMicroseconds": 170,
-                            "functionName": "width",
-                            "line": 34,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 96,
-                            "durationMicroseconds": 30,
-                            "functionName": "height",
-                            "line": 34,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 36,
-                            "durationMicroseconds": 299,
-                            "functionName": "color",
-                            "line": 35,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 34,
-                            "durationMicroseconds": 66,
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 18,
                             "functionName": "text",
-                            "line": 39,
-                            "message": ""
+                            "line": 86,
+                            "message": "Cannot access value for name gX"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 36,
-                            "durationMicroseconds": 97,
-                            "functionName": "width",
-                            "line": 52,
+                            "column": 117,
+                            "durationMicroseconds": 37,
+                            "functionName": "style",
+                            "line": 86,
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 79,
-                            "durationMicroseconds": 26,
-                            "functionName": "height",
-                            "line": 52,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 34,
-                            "durationMicroseconds": 54,
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 17,
                             "functionName": "text",
-                            "line": 57,
+                            "line": 87,
+                            "message": "Cannot access value for name gY"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 117,
+                            "durationMicroseconds": 25,
+                            "functionName": "style",
+                            "line": 87,
                             "message": ""
                         }
                     ],

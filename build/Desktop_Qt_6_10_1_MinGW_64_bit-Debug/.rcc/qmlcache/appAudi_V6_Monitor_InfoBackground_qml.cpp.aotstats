@@ -8,33 +8,33 @@
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 115,
+                            "durationMicroseconds": 83,
                             "functionName": "currentIndex",
-                            "line": 19,
+                            "line": 25,
                             "message": "Cannot access value for name activeTab"
                         },
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 99,
+                            "durationMicroseconds": 68,
                             "functionName": "fill",
-                            "line": 18,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 22,
-                            "durationMicroseconds": 66,
-                            "functionName": "oilTemp",
                             "line": 23,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
+                            "column": 22,
+                            "durationMicroseconds": 43,
+                            "functionName": "oilTemp",
+                            "line": 29,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 42,
+                            "durationMicroseconds": 27,
                             "functionName": "range",
-                            "line": 24,
+                            "line": 30,
                             "message": ""
                         }
                     ],

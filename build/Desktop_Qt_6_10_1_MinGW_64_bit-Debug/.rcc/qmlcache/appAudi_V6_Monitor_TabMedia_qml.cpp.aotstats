@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 107,
+                            "durationMicroseconds": 102,
                             "functionName": "centerIn",
                             "line": 8,
                             "message": ""
@@ -16,9 +16,9 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 46,
+                            "durationMicroseconds": 44,
                             "functionName": "alignment",
-                            "line": 17,
+                            "line": 19,
                             "message": ""
                         },
                         {
@@ -26,23 +26,23 @@
                             "column": 35,
                             "durationMicroseconds": 24,
                             "functionName": "centerIn",
-                            "line": 21,
+                            "line": 23,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 30,
+                            "durationMicroseconds": 36,
                             "functionName": "style",
-                            "line": 33,
+                            "line": 35,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 24,
+                            "durationMicroseconds": 30,
                             "functionName": "alignment",
-                            "line": 32,
+                            "line": 34,
                             "message": ""
                         },
                         {
@@ -50,31 +50,31 @@
                             "column": 20,
                             "durationMicroseconds": 26,
                             "functionName": "style",
-                            "line": 41,
+                            "line": 44,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 25,
+                            "durationMicroseconds": 38,
                             "functionName": "alignment",
-                            "line": 40,
+                            "line": 43,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 31,
+                            "durationMicroseconds": 32,
                             "functionName": "style",
-                            "line": 49,
+                            "line": 53,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 31,
+                            "durationMicroseconds": 36,
                             "functionName": "alignment",
-                            "line": 48,
+                            "line": 52,
                             "message": ""
                         }
                     ],

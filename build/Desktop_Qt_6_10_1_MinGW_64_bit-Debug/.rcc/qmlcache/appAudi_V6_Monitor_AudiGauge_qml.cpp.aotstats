@@ -8,145 +8,481 @@
                         {
                             "codegenResult": 2,
                             "column": 31,
-                            "durationMicroseconds": 126,
+                            "durationMicroseconds": 136,
                             "functionName": "numberArray",
-                            "line": 11,
+                            "line": 17,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 23,
-                            "durationMicroseconds": 44,
-                            "functionName": "fill",
-                            "line": 27,
+                            "column": 18,
+                            "durationMicroseconds": 88,
+                            "functionName": "visible",
+                            "line": 51,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 35,
+                            "durationMicroseconds": 41,
+                            "functionName": "r",
+                            "line": 57,
+                            "message": "Cannot access value for name gauge"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 72,
+                            "functionName": "startAng",
+                            "line": 59,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 21,
-                            "durationMicroseconds": 48,
-                            "functionName": "radius",
-                            "line": 32,
+                            "column": 28,
+                            "durationMicroseconds": 39,
+                            "functionName": "swp",
+                            "line": 60,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 38,
+                            "functionName": "fill",
+                            "line": 52,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 21,
+                            "durationMicroseconds": 23,
                             "functionName": "fill",
-                            "line": 31,
+                            "line": 64,
                             "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 47,
+                            "functionName": "capStyle",
+                            "line": 69,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 17,
+                            "functionName": "centerX",
+                            "line": 71,
+                            "message": "Cannot access value for name width"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 11,
+                            "functionName": "centerY",
+                            "line": 72,
+                            "message": "Cannot access value for name height"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 8,
+                            "functionName": "radiusX",
+                            "line": 73,
+                            "message": "Cannot access value for name r"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 8,
+                            "functionName": "radiusY",
+                            "line": 74,
+                            "message": "Cannot access value for name r"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 9,
+                            "functionName": "startAngle",
+                            "line": 75,
+                            "message": "Cannot access value for name startAng"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 14,
+                            "functionName": "sweepAngle",
+                            "line": 76,
+                            "message": "Cannot access value for name swp"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 26,
+                            "functionName": "fill",
+                            "line": 83,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 9,
+                            "functionName": "shadowColor",
+                            "line": 87,
+                            "message": "Cannot access value for name barColor"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 8,
+                            "functionName": "strokeColor",
+                            "line": 92,
+                            "message": "Cannot access value for name barColor"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 40,
+                            "functionName": "capStyle",
+                            "line": 95,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 16,
+                            "functionName": "centerX",
+                            "line": 97,
+                            "message": "Cannot access value for name width"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 11,
+                            "functionName": "centerY",
+                            "line": 98,
+                            "message": "Cannot access value for name height"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 8,
+                            "functionName": "radiusX",
+                            "line": 99,
+                            "message": "Cannot access value for name r"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 8,
+                            "functionName": "radiusY",
+                            "line": 100,
+                            "message": "Cannot access value for name r"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 8,
+                            "functionName": "startAngle",
+                            "line": 101,
+                            "message": "Cannot access value for name startAng"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 25,
+                            "functionName": "sweepAngle",
+                            "line": 102,
+                            "message": "Cannot access value for name swp"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 9,
+                            "functionName": "text",
+                            "line": 109,
+                            "message": "Cannot access value for name icon"
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 73,
-                            "functionName": "width",
-                            "line": 41,
+                            "durationMicroseconds": 31,
+                            "functionName": "style",
+                            "line": 113,
                             "message": ""
                         },
                         {
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 57,
+                            "functionName": "x",
+                            "line": 115,
+                            "message": "Cannot access value for name r"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 48,
+                            "functionName": "y",
+                            "line": 117,
+                            "message": "Cannot access value for name r"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 14,
+                            "durationMicroseconds": 8,
+                            "functionName": "val",
+                            "line": 125,
+                            "message": "Cannot access value for name leftValue1"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 15,
+                            "durationMicroseconds": 7,
+                            "functionName": "icon",
+                            "line": 126,
+                            "message": "Cannot access value for name leftIcon1"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 7,
+                            "functionName": "barColor",
+                            "line": 127,
+                            "message": "Cannot access value for name leftColor1"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 14,
+                            "durationMicroseconds": 6,
+                            "functionName": "val",
+                            "line": 132,
+                            "message": "Cannot access value for name leftValue2"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 15,
+                            "durationMicroseconds": 6,
+                            "functionName": "icon",
+                            "line": 133,
+                            "message": "Cannot access value for name leftIcon2"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 7,
+                            "functionName": "barColor",
+                            "line": 134,
+                            "message": "Cannot access value for name leftColor2"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 14,
+                            "durationMicroseconds": 7,
+                            "functionName": "val",
+                            "line": 139,
+                            "message": "Cannot access value for name rightValue1"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 15,
+                            "durationMicroseconds": 6,
+                            "functionName": "icon",
+                            "line": 140,
+                            "message": "Cannot access value for name rightIcon1"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 6,
+                            "functionName": "barColor",
+                            "line": 141,
+                            "message": "Cannot access value for name rightColor1"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 14,
+                            "durationMicroseconds": 15,
+                            "functionName": "val",
+                            "line": 146,
+                            "message": "Cannot access value for name rightValue2"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 15,
+                            "durationMicroseconds": 7,
+                            "functionName": "icon",
+                            "line": 147,
+                            "message": "Cannot access value for name rightIcon2"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 6,
+                            "functionName": "barColor",
+                            "line": 148,
+                            "message": "Cannot access value for name rightColor2"
+                        },
+                        {
                             "codegenResult": 0,
-                            "column": 47,
-                            "durationMicroseconds": 53,
-                            "functionName": "height",
-                            "line": 41,
+                            "column": 23,
+                            "durationMicroseconds": 28,
+                            "functionName": "fill",
+                            "line": 155,
                             "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 11,
+                            "functionName": "width",
+                            "line": 159,
+                            "message": "Cannot access value for name ringRadius"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 21,
+                            "durationMicroseconds": 9,
+                            "functionName": "height",
+                            "line": 160,
+                            "message": "Cannot access value for name ringRadius"
                         },
                         {
                             "codegenResult": 0,
                             "column": 21,
-                            "durationMicroseconds": 39,
+                            "durationMicroseconds": 54,
                             "functionName": "radius",
-                            "line": 43,
+                            "line": 162,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 24,
+                            "durationMicroseconds": 21,
                             "functionName": "centerIn",
-                            "line": 42,
+                            "line": 161,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 13,
+                            "functionName": "width",
+                            "line": 170,
+                            "message": "Cannot access value for name ringRadius"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 21,
+                            "durationMicroseconds": 10,
+                            "functionName": "height",
+                            "line": 171,
+                            "message": "Cannot access value for name ringRadius"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 21,
+                            "durationMicroseconds": 36,
+                            "functionName": "radius",
+                            "line": 173,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 20,
+                            "functionName": "centerIn",
+                            "line": 172,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 16,
+                            "durationMicroseconds": 24,
                             "functionName": "model",
-                            "line": 64,
+                            "line": 190,
                             "message": "Cannot load property length from (component in C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/AudiGauge.qml)::numberArray with type QVariant."
                         },
                         {
                             "codegenResult": 2,
                             "column": 41,
-                            "durationMicroseconds": 33,
+                            "durationMicroseconds": 26,
                             "functionName": "anglePerStep",
-                            "line": 67,
+                            "line": 193,
                             "message": "Cannot access value for name gauge"
                         },
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 22,
+                            "durationMicroseconds": 20,
                             "functionName": "rotation",
-                            "line": 68,
+                            "line": 194,
                             "message": "Cannot access value for name gauge"
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 30,
+                            "durationMicroseconds": 29,
                             "functionName": "fill",
-                            "line": 66,
+                            "line": 192,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 126,
+                            "durationMicroseconds": 133,
                             "functionName": "color",
-                            "line": 73,
+                            "line": 200,
                             "message": "Cannot access value for name gauge"
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 30,
-                            "durationMicroseconds": 42,
-                            "functionName": "top",
-                            "line": 74,
-                            "message": ""
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 18,
+                            "functionName": "y",
+                            "line": 203,
+                            "message": "Cannot access value for name ringRadius"
                         },
                         {
                             "codegenResult": 0,
                             "column": 43,
-                            "durationMicroseconds": 35,
+                            "durationMicroseconds": 47,
                             "functionName": "horizontalCenter",
-                            "line": 75,
+                            "line": 204,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 242,
+                            "durationMicroseconds": 224,
                             "functionName": "text",
-                            "line": 82,
+                            "line": 210,
                             "message": "Cannot access value for name gauge"
                         },
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 91,
+                            "durationMicroseconds": 93,
                             "functionName": "color",
-                            "line": 83,
+                            "line": 211,
                             "message": "Cannot access value for name gauge"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 17,
+                            "functionName": "y",
+                            "line": 217,
+                            "message": "Cannot access value for name ringRadius"
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 53,
+                            "durationMicroseconds": 50,
                             "functionName": "rotation",
-                            "line": 89,
+                            "line": 219,
                             "message": ""
                         },
                         {
@@ -154,31 +490,23 @@
                             "column": 24,
                             "durationMicroseconds": 29,
                             "functionName": "style",
-                            "line": 90,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 30,
-                            "durationMicroseconds": 44,
-                            "functionName": "top",
-                            "line": 87,
+                            "line": 220,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 43,
-                            "durationMicroseconds": 31,
+                            "durationMicroseconds": 33,
                             "functionName": "horizontalCenter",
-                            "line": 88,
+                            "line": 218,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 18,
-                            "durationMicroseconds": 27,
+                            "durationMicroseconds": 35,
                             "functionName": "visible",
-                            "line": 99,
+                            "line": 227,
                             "message": ""
                         },
                         {
@@ -186,135 +514,151 @@
                             "column": 23,
                             "durationMicroseconds": 20,
                             "functionName": "fill",
-                            "line": 100,
+                            "line": 228,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 49,
-                            "durationMicroseconds": 23,
+                            "column": 23,
+                            "durationMicroseconds": 25,
                             "functionName": "capStyle",
-                            "line": 104,
+                            "line": 234,
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
+                            "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 49,
+                            "durationMicroseconds": 14,
                             "functionName": "centerX",
-                            "line": 106,
-                            "message": ""
+                            "line": 236,
+                            "message": "Cannot access value for name width"
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 52,
-                            "durationMicroseconds": 40,
-                            "functionName": "centerY",
-                            "line": 106,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
+                            "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 84,
-                            "functionName": "radiusX",
-                            "line": 107,
-                            "message": ""
+                            "durationMicroseconds": 28,
+                            "functionName": "centerY",
+                            "line": 237,
+                            "message": "Cannot access value for name height"
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 59,
-                            "durationMicroseconds": 74,
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 10,
+                            "functionName": "radiusX",
+                            "line": 238,
+                            "message": "Cannot access value for name ringRadius"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 9,
                             "functionName": "radiusY",
-                            "line": 107,
-                            "message": ""
+                            "line": 239,
+                            "message": "Cannot access value for name ringRadius"
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 20,
+                            "durationMicroseconds": 25,
                             "functionName": "centerIn",
-                            "line": 120,
+                            "line": 254,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 15,
-                            "durationMicroseconds": 28,
+                            "durationMicroseconds": 30,
                             "functionName": "text",
-                            "line": 127,
+                            "line": 261,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 36,
+                            "durationMicroseconds": 30,
                             "functionName": "style",
-                            "line": 132,
+                            "line": 269,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 38,
+                            "durationMicroseconds": 39,
                             "functionName": "horizontalCenter",
-                            "line": 130,
+                            "line": 266,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 33,
+                            "durationMicroseconds": 30,
                             "functionName": "bottom",
-                            "line": 131,
+                            "line": 267,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 74,
+                            "functionName": "bottomMargin",
+                            "line": 268,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 15,
-                            "durationMicroseconds": 58,
+                            "durationMicroseconds": 50,
                             "functionName": "text",
-                            "line": 135,
+                            "line": 273,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 18,
-                            "durationMicroseconds": 63,
+                            "durationMicroseconds": 67,
                             "functionName": "visible",
-                            "line": 136,
+                            "line": 274,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 28,
+                            "durationMicroseconds": 78,
                             "functionName": "style",
-                            "line": 139,
+                            "line": 279,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 32,
+                            "durationMicroseconds": 55,
                             "functionName": "horizontalCenter",
-                            "line": 140,
+                            "line": 281,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 29,
+                            "durationMicroseconds": 33,
                             "functionName": "top",
-                            "line": 141,
+                            "line": 282,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 63,
+                            "functionName": "topMargin",
+                            "line": 283,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 19,
-                            "durationMicroseconds": 59,
+                            "durationMicroseconds": 66,
                             "functionName": "rotation",
-                            "line": 152,
+                            "line": 296,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -322,31 +666,31 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "calculateRotation",
-                            "line": 155,
+                            "line": 302,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 21,
+                            "durationMicroseconds": 23,
                             "functionName": "fill",
-                            "line": 150,
+                            "line": 294,
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 26,
-                            "durationMicroseconds": 33,
-                            "functionName": "top",
-                            "line": 178,
-                            "message": ""
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 20,
+                            "functionName": "y",
+                            "line": 327,
+                            "message": "Cannot access value for name ringRadius"
                         },
                         {
                             "codegenResult": 0,
                             "column": 39,
-                            "durationMicroseconds": 30,
+                            "durationMicroseconds": 73,
                             "functionName": "horizontalCenter",
-                            "line": 180,
+                            "line": 328,
                             "message": ""
                         }
                     ],

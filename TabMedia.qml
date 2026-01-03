@@ -10,9 +10,11 @@ Item {
 
         // Album Art
         Rectangle {
-            width: 220; height: 220
+            width: 220
+            height: 220
             color: "#111"
-            border.color: "#333"; border.width: 2
+            border.color: "#333"
+            border.width: 2
             radius: 10
             Layout.alignment: Qt.AlignHCenter
 
@@ -30,7 +32,8 @@ Item {
             color: "#888888"
             font.pixelSize: 20
             Layout.alignment: Qt.AlignHCenter
-            style: Text.Outline; styleColor: "black"
+            style: Text.Outline
+            styleColor: "black"
         }
         Text {
             text: "Dire Straits - Sultans of Swing"
@@ -38,7 +41,8 @@ Item {
             font.pixelSize: 32
             font.bold: true
             Layout.alignment: Qt.AlignHCenter
-            style: Text.Outline; styleColor: "black"
+            style: Text.Outline
+            styleColor: "black"
         }
         Text {
             text: "Bose Surround Active"
@@ -46,7 +50,8 @@ Item {
             font.pixelSize: 14
             font.bold: true
             Layout.alignment: Qt.AlignHCenter
-            style: Text.Outline; styleColor: "black"
+            style: Text.Outline
+            styleColor: "black"
         }
     }
 }

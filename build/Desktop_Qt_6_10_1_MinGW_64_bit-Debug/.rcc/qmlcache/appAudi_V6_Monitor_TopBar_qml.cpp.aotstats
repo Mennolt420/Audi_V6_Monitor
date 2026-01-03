@@ -8,89 +8,97 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 235,
+                            "durationMicroseconds": 190,
                             "functionName": "top",
-                            "line": 19,
+                            "line": 22,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 67,
+                            "durationMicroseconds": 51,
                             "functionName": "horizontalCenter",
-                            "line": 21,
+                            "line": 24,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 137,
+                            "durationMicroseconds": 114,
                             "functionName": "model",
-                            "line": 25,
+                            "line": 28,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
                         },
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 239,
+                            "durationMicroseconds": 197,
                             "functionName": "text",
-                            "line": 28,
+                            "line": 30,
                             "message": "Cannot access value for name modelData"
                         },
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 234,
+                            "durationMicroseconds": 178,
                             "functionName": "color",
-                            "line": 29,
+                            "line": 31,
                             "message": "Cannot load property activeTab from QQuickItem::parent with type QQuickItem."
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 32,
-                            "durationMicroseconds": 182,
-                            "functionName": "onClicked",
-                            "line": 37,
-                            "message": "Cannot access value for name modelData"
-                        },
-                        {
                             "codegenResult": 0,
-                            "column": 35,
+                            "column": 24,
                             "durationMicroseconds": 43,
-                            "functionName": "fill",
+                            "functionName": "style",
                             "line": 35,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 149,
+                            "functionName": "onClicked",
+                            "line": 41,
+                            "message": "Cannot access value for name modelData"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 40,
+                            "functionName": "fill",
+                            "line": 39,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 30,
-                            "durationMicroseconds": 189,
+                            "durationMicroseconds": 135,
                             "functionName": "visible",
-                            "line": 42,
+                            "line": 46,
                             "message": "Cannot load property activeTab from QQuickItem::parent with type QQuickItem."
                         },
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 89,
+                            "durationMicroseconds": 65,
                             "functionName": "width",
-                            "line": 43,
+                            "line": 47,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 34,
-                            "durationMicroseconds": 58,
+                            "durationMicroseconds": 47,
                             "functionName": "top",
-                            "line": 46,
+                            "line": 50,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 47,
-                            "durationMicroseconds": 58,
+                            "durationMicroseconds": 35,
                             "functionName": "horizontalCenter",
-                            "line": 48,
+                            "line": 52,
                             "message": ""
                         }
                     ],

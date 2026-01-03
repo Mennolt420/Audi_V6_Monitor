@@ -8,9 +8,9 @@
                         {
                             "codegenResult": 2,
                             "column": 30,
-                            "durationMicroseconds": 54,
+                            "durationMicroseconds": 53,
                             "functionName": "currentRpm",
-                            "line": 19,
+                            "line": 25,
                             "message": "Cannot retrieve a non-object type by ID: rpmSlider"
                         },
                         {
@@ -18,23 +18,39 @@
                             "column": 32,
                             "durationMicroseconds": 12,
                             "functionName": "currentSpeed",
-                            "line": 20,
+                            "line": 26,
                             "message": "Cannot retrieve a non-object type by ID: speedSlider"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 10,
+                            "functionName": "pedalPos",
+                            "line": 31,
+                            "message": "Cannot retrieve a non-object type by ID: pedalSlider"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 31,
+                            "durationMicroseconds": 10,
+                            "functionName": "throttlePos",
+                            "line": 32,
+                            "message": "Cannot retrieve a non-object type by ID: throttleSlider"
                         },
                         {
                             "codegenResult": 0,
                             "column": 23,
                             "durationMicroseconds": 72,
                             "functionName": "fill",
-                            "line": 28,
+                            "line": 41,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 16,
+                            "durationMicroseconds": 15,
                             "functionName": "activeTab",
-                            "line": 33,
+                            "line": 45,
                             "message": "Cannot access value for name selectedTab"
                         },
                         {
@@ -42,15 +58,15 @@
                             "column": 22,
                             "durationMicroseconds": 9,
                             "functionName": "oilTemp",
-                            "line": 34,
+                            "line": 46,
                             "message": "Cannot access value for name engineTemp"
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 23,
+                            "durationMicroseconds": 25,
                             "functionName": "range",
-                            "line": 35,
+                            "line": 47,
                             "message": ""
                         },
                         {
@@ -58,71 +74,7 @@
                             "column": 27,
                             "durationMicroseconds": 21,
                             "functionName": "fill",
-                            "line": 32,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 20,
-                            "durationMicroseconds": 11,
-                            "functionName": "value",
-                            "line": 46,
-                            "message": "Cannot access value for name currentRpm"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 26,
-                            "durationMicroseconds": 116,
-                            "functionName": "numberArray",
-                            "line": 49,
-                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 37,
-                            "durationMicroseconds": 54,
-                            "functionName": "verticalCenter",
-                            "line": 43,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 23,
-                            "durationMicroseconds": 14,
-                            "functionName": "text",
-                            "line": 54,
-                            "message": "Cannot access value for name currentGear"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 32,
-                            "functionName": "style",
-                            "line": 61,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 30,
-                            "durationMicroseconds": 32,
-                            "functionName": "family",
-                            "line": 57,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 35,
-                            "durationMicroseconds": 23,
-                            "functionName": "centerIn",
-                            "line": 58,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 16,
-                            "durationMicroseconds": 75,
-                            "functionName": "x",
-                            "line": 70,
+                            "line": 44,
                             "message": ""
                         },
                         {
@@ -130,7 +82,119 @@
                             "column": 20,
                             "durationMicroseconds": 12,
                             "functionName": "value",
+                            "line": 60,
+                            "message": "Cannot access value for name currentRpm"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 128,
+                            "functionName": "numberArray",
+                            "line": 62,
+                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 25,
+                            "durationMicroseconds": 25,
+                            "functionName": "leftValue1",
+                            "line": 67,
+                            "message": "Cannot access value for name coolTemp"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 25,
+                            "durationMicroseconds": 22,
+                            "functionName": "leftColor1",
+                            "line": 69,
+                            "message": "Cannot access value for name coolTemp"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 25,
+                            "durationMicroseconds": 14,
+                            "functionName": "leftValue2",
+                            "line": 70,
+                            "message": "Cannot access value for name engineTemp"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 25,
+                            "durationMicroseconds": 14,
+                            "functionName": "leftColor2",
                             "line": 72,
+                            "message": "Cannot access value for name engineTemp"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 9,
+                            "functionName": "rightValue1",
+                            "line": 75,
+                            "message": "Cannot access value for name throttlePos"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 8,
+                            "functionName": "rightValue2",
+                            "line": 78,
+                            "message": "Cannot access value for name pedalPos"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 64,
+                            "functionName": "verticalCenter",
+                            "line": 55,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 12,
+                            "functionName": "text",
+                            "line": 83,
+                            "message": "Cannot access value for name currentGear"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 24,
+                            "durationMicroseconds": 34,
+                            "functionName": "style",
+                            "line": 88,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 32,
+                            "functionName": "family",
+                            "line": 86,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 22,
+                            "functionName": "centerIn",
+                            "line": 87,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 16,
+                            "durationMicroseconds": 78,
+                            "functionName": "x",
+                            "line": 97,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 12,
+                            "functionName": "value",
+                            "line": 99,
                             "message": "Cannot access value for name currentSpeed"
                         },
                         {
@@ -138,151 +202,263 @@
                             "column": 26,
                             "durationMicroseconds": 142,
                             "functionName": "numberArray",
-                            "line": 74,
+                            "line": 101,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 12,
+                            "functionName": "rightValue2",
+                            "line": 104,
+                            "message": "Cannot access value for name fuelLevel"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 15,
+                            "functionName": "rightColor2",
+                            "line": 106,
+                            "message": "Cannot access value for name fuelLevel"
                         },
                         {
                             "codegenResult": 0,
                             "column": 37,
-                            "durationMicroseconds": 36,
+                            "durationMicroseconds": 37,
                             "functionName": "verticalCenter",
-                            "line": 69,
+                            "line": 96,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 16,
+                            "durationMicroseconds": 11,
                             "functionName": "text",
-                            "line": 78,
+                            "line": 109,
                             "message": "Cannot access value for name currentSpeed"
                         },
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 30,
+                            "durationMicroseconds": 44,
                             "functionName": "style",
-                            "line": 83,
+                            "line": 114,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 30,
-                            "durationMicroseconds": 26,
+                            "durationMicroseconds": 37,
                             "functionName": "family",
-                            "line": 81,
+                            "line": 112,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 18,
+                            "durationMicroseconds": 21,
                             "functionName": "centerIn",
-                            "line": 82,
+                            "line": 113,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 25,
+                            "durationMicroseconds": 28,
                             "functionName": "width",
-                            "line": 89,
+                            "line": 121,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 11,
+                            "durationMicroseconds": 14,
                             "functionName": "activeTab",
-                            "line": 91,
+                            "line": 123,
                             "message": "Cannot access value for name selectedTab"
                         },
                         {
                             "codegenResult": 2,
                             "column": 27,
-                            "durationMicroseconds": 9,
+                            "durationMicroseconds": 10,
                             "functionName": "onTabClicked",
-                            "line": 92,
+                            "line": 124,
                             "message": "Cannot find name selectedTab"
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 15,
+                            "durationMicroseconds": 20,
                             "functionName": "onTabClicked",
-                            "line": 92,
+                            "line": 124,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 26,
-                            "durationMicroseconds": 42,
+                            "durationMicroseconds": 36,
                             "functionName": "top",
-                            "line": 90,
+                            "line": 122,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 50,
+                            "functionName": "width",
+                            "line": 131,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 29,
-                            "durationMicroseconds": 46,
+                            "durationMicroseconds": 37,
                             "functionName": "bottom",
-                            "line": 97,
+                            "line": 133,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 39,
-                            "durationMicroseconds": 28,
-                            "functionName": "horizontalCenter",
-                            "line": 99,
+                            "column": 24,
+                            "durationMicroseconds": 25,
+                            "functionName": "width",
+                            "line": 136,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 106,
+                            "column": 30,
+                            "durationMicroseconds": 64,
+                            "functionName": "top",
+                            "line": 139,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
                             "durationMicroseconds": 26,
+                            "functionName": "fill",
+                            "line": 142,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 15,
+                            "functionName": "text",
+                            "line": 146,
+                            "message": "Cannot access value for name time"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 54,
                             "functionName": "style",
-                            "line": 101,
+                            "line": 150,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 84,
+                            "column": 34,
                             "durationMicroseconds": 34,
                             "functionName": "family",
-                            "line": 101,
+                            "line": 149,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 108,
-                            "durationMicroseconds": 25,
+                            "column": 28,
+                            "durationMicroseconds": 28,
                             "functionName": "style",
-                            "line": 102,
+                            "line": 158,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 86,
-                            "durationMicroseconds": 41,
+                            "column": 34,
+                            "durationMicroseconds": 29,
                             "functionName": "family",
-                            "line": 102,
+                            "line": 157,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 22,
+                            "functionName": "text",
+                            "line": 181,
+                            "message": "Cannot access value for name trip"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 32,
+                            "functionName": "style",
+                            "line": 185,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 34,
+                            "functionName": "family",
+                            "line": 184,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 15,
+                            "functionName": "text",
+                            "line": 189,
+                            "message": "Cannot access value for name odo"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 33,
+                            "functionName": "style",
+                            "line": 193,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 28,
+                            "functionName": "family",
+                            "line": 192,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 42,
+                            "durationMicroseconds": 37,
                             "functionName": "bottom",
-                            "line": 109,
+                            "line": 204,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 54,
-                            "durationMicroseconds": 31,
+                            "column": 23,
+                            "durationMicroseconds": 51,
                             "functionName": "left",
-                            "line": 109,
+                            "line": 205,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 24,
+                            "durationMicroseconds": 60,
+                            "functionName": "onEntered",
+                            "line": 211,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 37,
+                            "functionName": "onExited",
+                            "line": 212,
                             "message": ""
                         },
                         {
@@ -290,7 +466,15 @@
                             "column": 27,
                             "durationMicroseconds": 20,
                             "functionName": "fill",
-                            "line": 112,
+                            "line": 209,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 18,
+                            "functionName": "fill",
+                            "line": 216,
                             "message": ""
                         }
                     ],

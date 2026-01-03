@@ -1,10 +1,12 @@
 import QtQuick
-import QtQuick.Layouts    // Deze was de boosdoener, nu gefixt
+import QtQuick.Layouts
+// Deze was de boosdoener, nu gefixt
 import QtLocation
 import QtPositioning
 import QtQuick.Shapes
-import QtQuick.Effects    // Voor mooie effecten op de pijl
+import QtQuick.Effects
 
+// Voor mooie effecten op de pijl
 Item {
     id: root
 
@@ -23,7 +25,7 @@ Item {
 
         // De echte Virtual Cockpit look:
         zoomLevel: 17.5
-        tilt: 65            // Flink gekanteld voor diepte
+        tilt: 65 // Flink gekanteld voor diepte
         bearing: 0
         fieldOfView: 50
         copyrightsVisible: false // Maakt het schoner
@@ -44,34 +46,60 @@ Item {
 
             sourceItem: Item {
                 id: carItem
-                width: 100; height: 100
+                width: 100
+                height: 100
 
                 // Blauwe gloed onder de auto
                 Rectangle {
                     anchors.centerIn: parent
-                    width: 60; height: 60; radius: 30
+                    width: 60
+                    height: 60
+                    radius: 30
                     color: "#00ccff"
                     opacity: 0.4
                     layer.enabled: true
-                    layer.effect: MultiEffect { blurEnabled: true; blurMax: 32; blur: 1.0 }
+                    layer.effect: MultiEffect {
+                        blurEnabled: true
+                        blurMax: 32
+                        blur: 1.0
+                    }
                 }
 
                 // De Pijl
                 Shape {
                     anchors.centerIn: parent
-                    width: 40; height: 50
+                    width: 40
+                    height: 50
                     ShapePath {
-                        strokeColor: "white"; strokeWidth: 2
+                        strokeColor: "white"
+                        strokeWidth: 2
                         fillColor: "#00ccff"
-                        startX: 20; startY: 0
-                        PathLine { x: 40; y: 50 }
-                        PathLine { x: 20; y: 35 }
-                        PathLine { x: 0; y: 50 }
-                        PathLine { x: 20; y: 0 }
+                        startX: 20
+                        startY: 0
+                        PathLine {
+                            x: 40
+                            y: 50
+                        }
+                        PathLine {
+                            x: 20
+                            y: 35
+                        }
+                        PathLine {
+                            x: 0
+                            y: 50
+                        }
+                        PathLine {
+                            x: 20
+                            y: 0
+                        }
                     }
                     // Schaduw
                     layer.enabled: true
-                    layer.effect: MultiEffect { shadowEnabled: true; shadowColor: "black"; shadowVerticalOffset: 5 }
+                    layer.effect: MultiEffect {
+                        shadowEnabled: true
+                        shadowColor: "black"
+                        shadowVerticalOffset: 5
+                    }
                 }
             }
         }
@@ -83,7 +111,8 @@ Item {
             anchors.top: parent.top
             anchors.topMargin: 110
             anchors.horizontalCenter: parent.horizontalCenter
-            width: 350; height: 90
+            width: 350
+            height: 90
 
             color: "#cc111111" // Semi-transparant
             radius: 10
@@ -94,18 +123,26 @@ Item {
                 anchors.margins: 15
                 spacing: 20
 
-                Text { text: "↱"; color: "white"; font.pixelSize: 50; font.bold: true }
+                Text {
+                    text: "↱"
+                    color: "white"
+                    font.pixelSize: 50
+                    font.bold: true
+                }
                 ColumnLayout {
                     spacing: 0
                     Text {
                         text: "150 m"
                         color: "#00ccff"
-                        font.pixelSize: 28; font.bold: true; font.family: "Titillium Web"
+                        font.pixelSize: 28
+                        font.bold: true
+                        font.family: "Titillium Web"
                     }
                     Text {
                         text: "Stationsweg"
                         color: "#cccccc"
-                        font.pixelSize: 18; font.family: "Titillium Web"
+                        font.pixelSize: 18
+                        font.family: "Titillium Web"
                         Layout.fillWidth: true
                         elide: Text.ElideRight
                     }
