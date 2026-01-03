@@ -157,6 +157,7 @@ Window {
 
         // 5. VIEW KNOP (Boven het testpaneel)
         Button {
+            id: button
             text: "VIEW MODE"
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 160 // Ruimte voor sliders
@@ -169,6 +170,8 @@ Window {
             }
             contentItem: Text {
                 text: parent.text
+                anchors.left: parent.left
+                anchors.right: parent.right
                 color: "white"
                 font.bold: true
                 padding: 10
@@ -223,6 +226,7 @@ Window {
 
             // Speed Slider
             RowLayout {
+                id: rowLayout
                 Layout.fillWidth: true
                 Text {
                     text: "SPEED (0-280)"

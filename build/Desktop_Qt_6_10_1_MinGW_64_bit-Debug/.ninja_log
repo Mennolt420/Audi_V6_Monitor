@@ -54,3 +54,16 @@
 314	354	7887105631389748	CMakeFiles/appAudi_V6_Monitor.dir/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/qrc_appAudi_V6_Monitor_raw_qml_0.cpp.obj	2266d7a999a4bde8
 312	1840	7887105631364609	CMakeFiles/appAudi_V6_Monitor.dir/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.rcc/qmlcache/appAudi_V6_Monitor_Main_qml.cpp.obj	9675c7b7007b0c71
 1840	2136	7887105646651722	appAudi_V6_Monitor.exe	d8128be01aae4a12
+18	64	7891496276723739	.qt/appAudi_V6_Monitor_qml.txt	cce574ec8fe4828
+18	64	7891496276723739	C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/appAudi_V6_Monitor_qml.txt	cce574ec8fe4828
+24	243	7891496278491494	.qt/qml_imports/appAudi_V6_Monitor_build.cmake	c3200db375836d11
+24	243	7891496278491494	C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/qml_imports/appAudi_V6_Monitor_build.cmake	c3200db375836d11
+248	271	7891496278799672	.qt/rcc/qrc_appAudi_V6_Monitor_raw_qml_0.cpp	e959aaa1322ff8ee
+248	271	7891496278799672	C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/qrc_appAudi_V6_Monitor_raw_qml_0.cpp	e959aaa1322ff8ee
+243	351	7891496279533469	.rcc/qmlcache/appAudi_V6_Monitor_Main_qml.cpp	73622823013ce399
+243	351	7891496279533469	.rcc/qmlcache/appAudi_V6_Monitor_Main_qml.cpp.aotstats	73622823013ce399
+243	351	7891496279533469	C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.rcc/qmlcache/appAudi_V6_Monitor_Main_qml.cpp	73622823013ce399
+243	351	7891496279533469	C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.rcc/qmlcache/appAudi_V6_Monitor_Main_qml.cpp.aotstats	73622823013ce399
+354	542	7891496279651022	CMakeFiles/appAudi_V6_Monitor.dir/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qt/rcc/qrc_appAudi_V6_Monitor_raw_qml_0.cpp.obj	2266d7a999a4bde8
+351	2062	7891496279620563	CMakeFiles/appAudi_V6_Monitor.dir/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.rcc/qmlcache/appAudi_V6_Monitor_Main_qml.cpp.obj	9675c7b7007b0c71
+2062	2564	7891496296732281	appAudi_V6_Monitor.exe	d8128be01aae4a12

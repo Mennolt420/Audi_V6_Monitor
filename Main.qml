@@ -95,7 +95,7 @@ Window {
             isRedline: true
 
             // Dit blijft 6.1 (we kijken naar de 6e positie in de rij)
-            redlineStartIndex: 6.1
+            redlineStartIndex: 6.5
 
             width: 650
             height: 650
@@ -157,6 +157,7 @@ Window {
 
         // 5. VIEW KNOP (Boven het testpaneel)
         Button {
+            id: button
             text: "VIEW MODE"
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 160 // Ruimte voor sliders
@@ -169,6 +170,8 @@ Window {
             }
             contentItem: Text {
                 text: parent.text
+                anchors.left: parent.left
+                anchors.right: parent.right
                 color: "white"
                 font.bold: true
                 padding: 10
@@ -223,6 +226,7 @@ Window {
 
             // Speed Slider
             RowLayout {
+                id: rowLayout
                 Layout.fillWidth: true
                 Text {
                     text: "SPEED (0-280)"
@@ -336,7 +340,8 @@ Window {
                     visible: index < numberArray.length - 1
                     width: 2
                     height: 12
-                    color: "white"
+                    color: (isRedline
+                            && index >= redlineStartIndex - 1) ? "#cc0000" : "#aaaaaa"
                     transform: Rotation {
                         origin.x: 0
                         origin.y: parent.height / 2
@@ -365,7 +370,7 @@ Window {
                     radiusX: (width / 2) - 20
                     radiusY: (height / 2) - 20
                     startAngle: -8
-                    sweepAngle: 48
+                    sweepAngle: 48.4
                 }
             }
         }
