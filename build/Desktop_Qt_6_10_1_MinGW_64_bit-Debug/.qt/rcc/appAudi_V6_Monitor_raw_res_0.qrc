@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/Audi_V6_Monitor/">
+    <file alias="assets/Titillium_Web/TitilliumWeb-Regular.ttf">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Titillium_Web/TitilliumWeb-Regular.ttf</file>
+    <file alias="assets/Titillium_Web/TitilliumWeb-Bold.ttf">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Titillium_Web/TitilliumWeb-Bold.ttf</file>
+  </qresource>
+</RCC>
+

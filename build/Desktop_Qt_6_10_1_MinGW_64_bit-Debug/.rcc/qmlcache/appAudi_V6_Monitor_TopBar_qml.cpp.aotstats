@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 181,
+                            "durationMicroseconds": 235,
                             "functionName": "top",
                             "line": 19,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 70,
+                            "durationMicroseconds": 67,
                             "functionName": "horizontalCenter",
                             "line": 21,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 127,
+                            "durationMicroseconds": 137,
                             "functionName": "model",
                             "line": 25,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 212,
+                            "durationMicroseconds": 239,
                             "functionName": "text",
                             "line": 28,
                             "message": "Cannot access value for name modelData"
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 2,
                             "column": 24,
-                            "durationMicroseconds": 157,
+                            "durationMicroseconds": 234,
                             "functionName": "color",
                             "line": 29,
                             "message": "Cannot load property activeTab from QQuickItem::parent with type QQuickItem."
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 2,
                             "column": 32,
-                            "durationMicroseconds": 180,
+                            "durationMicroseconds": 182,
                             "functionName": "onClicked",
                             "line": 37,
                             "message": "Cannot access value for name modelData"
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 48,
+                            "durationMicroseconds": 43,
                             "functionName": "fill",
                             "line": 35,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 2,
                             "column": 30,
-                            "durationMicroseconds": 142,
+                            "durationMicroseconds": 189,
                             "functionName": "visible",
                             "line": 42,
                             "message": "Cannot load property activeTab from QQuickItem::parent with type QQuickItem."
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 91,
+                            "durationMicroseconds": 89,
                             "functionName": "width",
                             "line": 43,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 34,
-                            "durationMicroseconds": 61,
+                            "durationMicroseconds": 58,
                             "functionName": "top",
                             "line": 46,
                             "message": ""
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 47,
-                            "durationMicroseconds": 70,
+                            "durationMicroseconds": 58,
                             "functionName": "horizontalCenter",
                             "line": 48,
                             "message": ""

@@ -16,10 +16,9 @@
 #endif
 Q_QMLTYPE_EXPORT void qml_register_types_Audi_V6_Monitor()
 {
-    qmlRegisterModule("Audi_V6_Monitor", 254, 0);
     QT_WARNING_PUSH QT_WARNING_DISABLE_DEPRECATED
     QT_WARNING_POP
-    qmlRegisterModule("Audi_V6_Monitor", 254, 254);
+    qmlRegisterModule("Audi_V6_Monitor", 1, 0);
 }
 
 static const QQmlModuleRegistration audiV6MonitorRegistration("Audi_V6_Monitor", qml_register_types_Audi_V6_Monitor);

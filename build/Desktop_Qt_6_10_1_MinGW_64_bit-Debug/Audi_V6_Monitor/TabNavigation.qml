@@ -1,15 +1,16 @@
 import QtQuick
+import QtQuick.Layouts    // Deze was de boosdoener, nu gefixt
 import QtLocation
 import QtPositioning
+import QtQuick.Shapes
+import QtQuick.Effects    // Voor mooie effecten op de pijl
 
 Item {
     id: root
 
-    // Plugin configuratie voor OpenStreetMap
     Plugin {
         id: mapPlugin
         name: "osm"
-        // Tip: Voor productie kun je hier 'mapboxgl' gebruiken met een API key
     }
 
     Map {
@@ -17,58 +18,98 @@ Item {
         anchors.fill: parent
         plugin: mapPlugin
 
-        // Start locatie (ergens in Nederland)
-        center: QtPositioning.coordinate(52.3676, 4.9041) // Amsterdam
-        zoomLevel: 14
+        // Locatie Heiloo/Alkmaar
+        center: QtPositioning.coordinate(52.60, 4.70)
 
-        // Donkere modus simuleren over de kaart (Nachtrit gevoel)
-        layer.enabled: true
-        color: "#000000" // Fallback
+        // De echte Virtual Cockpit look:
+        zoomLevel: 17.5
+        tilt: 65            // Flink gekanteld voor diepte
+        bearing: 0
+        fieldOfView: 50
+        copyrightsVisible: false // Maakt het schoner
 
-        // We maken de kaart iets donkerder zodat de witte tellers eruit springen
+        // Donkere filter voor nachtrit-sfeer
         Rectangle {
             anchors.fill: parent
-            color: "black"
-            opacity: 0.4
+            color: "#050505"
+            opacity: 0.5
         }
 
-        // Navigatie Pijl (De auto)
+        // --- DE AUTO (3D Pijl) ---
         MapQuickItem {
+            id: carMarker
             coordinate: map.center
-            anchorPoint.x: arrow.width / 2
-            anchorPoint.y: arrow.height / 2
+            anchorPoint.x: carItem.width / 2
+            anchorPoint.y: carItem.height / 2
 
-            sourceItem: Text {
-                id: arrow
-                text: "➤"
-                color: "#00ccff" // Audi cyaan/blauw accent
-                font.pixelSize: 60
-                style: Text.Outline; styleColor: "black"
-                rotation: -45
+            sourceItem: Item {
+                id: carItem
+                width: 100; height: 100
+
+                // Blauwe gloed onder de auto
+                Rectangle {
+                    anchors.centerIn: parent
+                    width: 60; height: 60; radius: 30
+                    color: "#00ccff"
+                    opacity: 0.4
+                    layer.enabled: true
+                    layer.effect: MultiEffect { blurEnabled: true; blurMax: 32; blur: 1.0 }
+                }
+
+                // De Pijl
+                Shape {
+                    anchors.centerIn: parent
+                    width: 40; height: 50
+                    ShapePath {
+                        strokeColor: "white"; strokeWidth: 2
+                        fillColor: "#00ccff"
+                        startX: 20; startY: 0
+                        PathLine { x: 40; y: 50 }
+                        PathLine { x: 20; y: 35 }
+                        PathLine { x: 0; y: 50 }
+                        PathLine { x: 20; y: 0 }
+                    }
+                    // Schaduw
+                    layer.enabled: true
+                    layer.effect: MultiEffect { shadowEnabled: true; shadowColor: "black"; shadowVerticalOffset: 5 }
+                }
             }
         }
 
-        // Navigatie instructie overlay
-        Column {
-            anchors.top: parent.top
-            anchors.topMargin: 150
-            anchors.horizontalCenter: parent.horizontalCenter
-            spacing: 5
+        // --- HUD INSTRUCTIES (Zwevend) ---
 
-            Text {
-                text: "100m"
-                color: "white"
-                font.pixelSize: 40
-                font.bold: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                style: Text.Outline; styleColor: "black"
-            }
-            Text {
-                text: "Rechtsaf slaan"
-                color: "#cccccc"
-                font.pixelSize: 24
-                anchors.horizontalCenter: parent.horizontalCenter
-                style: Text.Outline; styleColor: "black"
+        // Volgende Afslag
+        Rectangle {
+            anchors.top: parent.top
+            anchors.topMargin: 110
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: 350; height: 90
+
+            color: "#cc111111" // Semi-transparant
+            radius: 10
+            border.color: "#333"
+
+            RowLayout {
+                anchors.fill: parent
+                anchors.margins: 15
+                spacing: 20
+
+                Text { text: "↱"; color: "white"; font.pixelSize: 50; font.bold: true }
+                ColumnLayout {
+                    spacing: 0
+                    Text {
+                        text: "150 m"
+                        color: "#00ccff"
+                        font.pixelSize: 28; font.bold: true; font.family: "Titillium Web"
+                    }
+                    Text {
+                        text: "Stationsweg"
+                        color: "#cccccc"
+                        font.pixelSize: 18; font.family: "Titillium Web"
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+                }
             }
         }
     }

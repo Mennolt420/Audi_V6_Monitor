@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Shapes
+import QtQuick.Effects
 
 Item {
     id: gauge
@@ -11,55 +12,54 @@ Item {
     property string label: ""
     property string logoText: ""
     property bool isRedline: false
-    property real redlineStartIndex: 0
+    property real redlineStartIndex: 6.5
+
+    // Inhoud in het midden
     property alias centerContent: centerContainer.children
 
     property real startAngle: -130
     property real totalSweep: 260
 
     // =================================================================
-    // STRUCTUUR & LEESBAARHEID (Doorzichtig maar met contrast)
+    // 1. ACHTERGROND RINGEN (Open & Glowing)
     // =================================================================
-
-    // 1. Buitenste Ringen (Voor definitie van de klok)
-    Rectangle {
+    Item {
         anchors.fill: parent
-        radius: width / 2
-        color: "transparent"
-        border.color: "#444444" // Iets lichter grijs voor zichtbaarheid op donkere kaart
-        border.width: 4
-        opacity: 0.8
-    }
 
-    // Subtiele binnenring
-    Rectangle {
-        width: parent.width - 40; height: parent.height - 40
-        anchors.centerIn: parent
-        radius: width / 2
-        color: "transparent"
-        border.color: "#222222"
-        border.width: 2
-        opacity: 0.6
-    }
+        // Hoofdring
+        Rectangle {
+            anchors.fill: parent
+            radius: width / 2
+            color: "transparent"
+            border.color: "#ffffff"
+            border.width: 2
+            opacity: 0.15
+        }
 
-    // 2. Centrale Gloed (Zorgt dat de tekst in het midden leesbaar is)
-    Rectangle {
-        anchors.centerIn: parent
-        width: 300; height: 300
-        radius: 150
-        // Radiaal verloop van zwart naar transparant
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#cc000000" } // 80% zwart in het hart
-            GradientStop { position: 0.7; color: "#66000000" } // Deels transparant
-            GradientStop { position: 1.0; color: "transparent" }
+        // Binnenring
+        Rectangle {
+            width: parent.width - 40; height: parent.height - 40
+            anchors.centerIn: parent
+            radius: width / 2
+            color: "transparent"
+            border.color: "#ffffff"
+            border.width: 1
+            opacity: 0.1
+        }
+
+        // Glow effect
+        layer.enabled: true
+        layer.effect: MultiEffect {
+            shadowEnabled: true
+            shadowColor: "#00ccff"
+            shadowBlur: 0.8
+            opacity: 0.5
         }
     }
 
     // =================================================================
-    // DE KLOK ONDERDELEN
+    // 2. SCHAALVERDELING
     // =================================================================
-
-    // 3. Schaalverdeling
     Repeater {
         model: gauge.numberArray.length
         Item {
@@ -74,76 +74,83 @@ Item {
                 anchors.top: parent.top; anchors.topMargin: 20
                 anchors.horizontalCenter: parent.horizontalCenter
                 antialiasing: true
+                border.color: "black"; border.width: 1
             }
 
-            // Cijfers (Met outline!)
+            // Cijfers
             Text {
                 text: gauge.isRedline ? gauge.numberArray[index] / 1000 : gauge.numberArray[index]
                 color: (gauge.isRedline && index >= gauge.redlineStartIndex) ? "#cc0000" : "#ffffff"
-                font.pixelSize: 28
-                font.bold: true; font.family: "Arial"
+                font.pixelSize: 32
+                font.bold: true
+                font.family: "Titillium Web"
                 anchors.top: parent.top; anchors.topMargin: 55
                 anchors.horizontalCenter: parent.horizontalCenter
                 rotation: -parent.rotation
-
-                // Zwarte rand om de letters (Vervangt DropShadow voor leesbaarheid)
-                style: Text.Outline
-                styleColor: "black"
+                style: Text.Outline; styleColor: "black"
             }
         }
     }
 
-    // 4. Rode Boog (RPM Redline)
+    // =================================================================
+    // 3. REDLINE BOOG
+    // =================================================================
     Shape {
         visible: gauge.isRedline
         anchors.fill: parent
-        opacity: 0.8
+        opacity: 0.9
         ShapePath {
-            strokeColor: "#cc0000"; strokeWidth: 8; fillColor: "transparent"; capStyle: ShapePath.FlatCap
+            strokeColor: "#cc0000"; strokeWidth: 8
+            fillColor: "transparent"; capStyle: ShapePath.FlatCap
             PathAngleArc {
                 centerX: gauge.width / 2; centerY: gauge.height / 2
                 radiusX: (gauge.width / 2) - 20; radiusY: (gauge.height / 2) - 20
                 startAngle: -8; sweepAngle: 48.4
             }
         }
+        layer.enabled: true
+        layer.effect: MultiEffect { shadowEnabled: true; shadowColor: "#ff0000"; shadowBlur: 1.0 }
     }
 
-    // 5. Midden Inhoud Container
+    // =================================================================
+    // 4. MIDDEN INHOUD
+    // =================================================================
     Item {
         id: centerContainer
         anchors.centerIn: parent
-        width: 200; height: 200
+        width: 250; height: 250
         z: 5
     }
 
-    // 6. Labels (TT logo, km/h, etc)
+    // Labels
     Text {
         text: gauge.label
         color: "#cccccc"
-        font.pixelSize: 24
-        font.italic: true
-        font.bold: true
+        font.pixelSize: 20; font.italic: true; font.bold: true
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 160
+        anchors.bottom: parent.bottom; anchors.bottomMargin: 160
         style: Text.Outline; styleColor: "black"
     }
     Text {
         text: gauge.logoText
         visible: gauge.logoText !== ""
         color: "white"
-        font.pixelSize: 32
-        font.bold: true; font.italic: true
+        font.pixelSize: 32; font.bold: true; font.italic: true
         style: Text.Outline; styleColor: "#cc0000"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
-        anchors.topMargin: 180
+        anchors.top: parent.top; anchors.topMargin: 180
+        layer.enabled: true
+        layer.effect: MultiEffect { shadowEnabled: true; shadowColor: "black"; shadowBlur: 0.5 }
     }
 
-    // 7. De Naald
+    // =================================================================
+    // 5. DE NAALD (Aan de buitenkant)
+    // =================================================================
     Item {
         anchors.fill: parent
         z: 10
+        rotation: calculateRotation(gauge.value)
+        Behavior on rotation { SmoothedAnimation { velocity: 2500 } }
 
         function calculateRotation(val) {
             var arr = gauge.numberArray
@@ -160,27 +167,28 @@ Item {
             return gauge.startAngle
         }
 
-        rotation: calculateRotation(gauge.value)
-        Behavior on rotation { SmoothedAnimation { velocity: 2000 } }
-
-        // Schaduw van de naald (Simulatie met een zwart rechthoekje erachter)
+        // De Pointer (Het rode blokje aan de rand)
         Rectangle {
-            width: 14; height: 35
-            color: "black"
-            opacity: 0.5
+            width: 14
+            height: 35
+            color: "#ff0000"
             radius: 2
-            anchors.top: parent.top; anchors.topMargin: 14 // Iets lager = schaduw effect
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.horizontalCenterOffset: 2 // Iets naar rechts = schaduw effect
-        }
 
-        // De echte naald
-        Rectangle {
-            width: 14; height: 35
-            color: "#ff0000" // Audi rood
-            radius: 2
-            anchors.top: parent.top; anchors.topMargin: 12
+            // Positie: Aan de bovenkant van de cirkel (de rand)
+            anchors.top: parent.top
+            anchors.topMargin: 12
             anchors.horizontalCenter: parent.horizontalCenter
+
+            antialiasing: true
+
+            // Glow Effect voor de pointer
+            layer.enabled: true
+            layer.effect: MultiEffect {
+                shadowEnabled: true
+                shadowColor: "#ff0000" // Rode gloed
+                shadowBlur: 1.0
+                shadowVerticalOffset: 0
+            }
         }
     }
 }

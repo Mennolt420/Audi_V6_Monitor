@@ -8,113 +8,105 @@
                         {
                             "codegenResult": 0,
                             "column": 17,
-                            "durationMicroseconds": 148,
+                            "durationMicroseconds": 131,
                             "functionName": "plugin",
-                            "line": 18,
+                            "line": 19,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 17,
-                            "durationMicroseconds": 182,
+                            "durationMicroseconds": 123,
                             "functionName": "center",
-                            "line": 21,
+                            "line": 22,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method coordinate, returning QGeoCoordinate -> call to method coordinate, returning QGeoCoordinate"
                         },
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 42,
+                            "durationMicroseconds": 24,
                             "functionName": "fill",
-                            "line": 17,
+                            "line": 18,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 39,
+                            "durationMicroseconds": 20,
                             "functionName": "fill",
-                            "line": 30,
+                            "line": 33,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 69,
+                            "durationMicroseconds": 47,
                             "functionName": "coordinate",
-                            "line": 37,
+                            "line": 41,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 93,
+                            "durationMicroseconds": 57,
                             "functionName": "x",
-                            "line": 38,
+                            "line": 42,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 84,
+                            "durationMicroseconds": 51,
                             "functionName": "y",
-                            "line": 39,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 61,
-                            "functionName": "style",
-                            "line": 46,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 26,
-                            "durationMicroseconds": 75,
-                            "functionName": "top",
-                            "line": 53,
+                            "line": 43,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 39,
-                            "durationMicroseconds": 67,
+                            "durationMicroseconds": 23,
+                            "functionName": "centerIn",
+                            "line": 51,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 17,
+                            "functionName": "centerIn",
+                            "line": 61,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 26,
+                            "durationMicroseconds": 41,
+                            "functionName": "top",
+                            "line": 83,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 27,
                             "functionName": "horizontalCenter",
-                            "line": 55,
+                            "line": 85,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 66,
-                            "functionName": "style",
-                            "line": 64,
+                            "column": 31,
+                            "durationMicroseconds": 28,
+                            "functionName": "fill",
+                            "line": 93,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 43,
-                            "durationMicroseconds": 57,
-                            "functionName": "horizontalCenter",
-                            "line": 63,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 46,
-                            "functionName": "style",
-                            "line": 71,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 43,
-                            "durationMicroseconds": 75,
-                            "functionName": "horizontalCenter",
-                            "line": 70,
+                            "column": 32,
+                            "durationMicroseconds": 30,
+                            "functionName": "elide",
+                            "line": 110,
                             "message": ""
                         }
                     ],

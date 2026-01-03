@@ -3,42 +3,60 @@ import QtQuick.Layouts
 
 Item {
     id: root
-
-    // Data die we nodig hebben van Main
     property int oilTemp: 0
     property int range: 0
 
     ColumnLayout {
         anchors.centerIn: parent
-        spacing: 40
+        spacing: 30
 
+        // Titel
         Text {
-            text: "QUATTRO STATUS"
-            color: "#444444"; font.bold: true; font.pixelSize: 24
+            text: "VEHICLE STATUS"
+            color: "white"; font.bold: true; font.pixelSize: 22
             Layout.alignment: Qt.AlignHCenter
             style: Text.Outline; styleColor: "black"
         }
 
         RowLayout {
-            spacing: 120
+            spacing: 80
             Layout.alignment: Qt.AlignHCenter
 
+            // Olie Temperatuur Balk
             Column {
-                Text { text: "OIL TEMP"; color: "#888888"; font.pixelSize: 16; font.bold: true; style: Text.Outline; styleColor: "black" }
-                Text { text: root.oilTemp + "°C"; color: "white"; font.pixelSize: 32; font.bold: true; style: Text.Outline; styleColor: "black" }
+                spacing: 5
+                Text { text: "OIL TEMP"; color: "#888"; font.pixelSize: 14; font.bold: true }
+                Row {
+                    spacing: 10
+                    Rectangle {
+                        width: 150; height: 10; color: "#333"; radius: 5
+                        Rectangle {
+                            width: parent.width * (Math.min(root.oilTemp, 130) / 130); height: parent.height
+                            color: root.oilTemp > 90 ? "white" : "#00ccff"
+                            radius: 5
+                        }
+                    }
+                    Text { text: root.oilTemp + "°C"; color: "white"; font.bold: true }
+                }
             }
-            Column {
-                Text { text: "RANGE"; color: "#888888"; font.pixelSize: 16; font.bold: true; style: Text.Outline; styleColor: "black" }
-                Text { text: root.range + " km"; color: "white"; font.pixelSize: 32; font.bold: true; style: Text.Outline; styleColor: "black" }
-            }
-        }
 
-        // Decoratieve lijn
-        Rectangle {
-            height: 2; width: 400
-            color: "#cc0000"
-            Layout.alignment: Qt.AlignHCenter
-            opacity: 0.5
+            // Brandstof / Range Balk
+            Column {
+                spacing: 5
+                Text { text: "RANGE"; color: "#888"; font.pixelSize: 14; font.bold: true }
+                Row {
+                    spacing: 10
+                    Rectangle {
+                        width: 150; height: 10; color: "#333"; radius: 5
+                        Rectangle {
+                            width: parent.width * (root.range / 600); height: parent.height
+                            color: "white"
+                            radius: 5
+                        }
+                    }
+                    Text { text: root.range + " km"; color: "white"; font.bold: true }
+                }
+            }
         }
     }
 }

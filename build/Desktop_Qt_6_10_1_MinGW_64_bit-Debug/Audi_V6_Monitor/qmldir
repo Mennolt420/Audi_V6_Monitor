@@ -1,15 +1,19 @@
 module Audi_V6_Monitor
 typeinfo appAudi_V6_Monitor.qmltypes
+depends QtQuick
 depends QtQuick.Controls
 depends QtQuick.Layouts
 depends QtQuick.Shapes
+depends QtQuick.Effects
+depends QtLocation
+depends QtPositioning
 prefer :/qt/qml/Audi_V6_Monitor/
-Main 254.0 Main.qml
-AudiGauge 254.0 AudiGauge.qml
-InfoBackground 254.0 InfoBackground.qml
-TopBar 254.0 TopBar.qml
-TabCar 254.0 TabCar.qml
-TabMedia 254.0 TabMedia.qml
-TabNavigation 254.0 TabNavigation.qml
+Main 1.0 Main.qml
+AudiGauge 1.0 AudiGauge.qml
+InfoBackground 1.0 InfoBackground.qml
+TopBar 1.0 TopBar.qml
+TabCar 1.0 TabCar.qml
+TabMedia 1.0 TabMedia.qml
+TabNavigation 1.0 TabNavigation.qml
 depends QtQuick
 
