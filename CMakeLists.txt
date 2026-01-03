@@ -23,10 +23,13 @@ qt_add_qml_module(appAudi_V6_Monitor
         TabCar.qml
         TabMedia.qml
         TabNavigation.qml
-        # TabPhone.qml is verwijderd
     RESOURCES
-        assets/Titillium_Web/TitilliumWeb-Regular.ttf
-        assets/Titillium_Web/TitilliumWeb-Bold.ttf
+        # --- AUDI FONTS (Normal & Bold) ---
+        "assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Normal_4.03.ttf"
+        "assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Bold_4.03.ttf"
+
+        # --- AUDI RINGS (White) ---
+        "assets/Audi-Rings-Digital_RGB/Web_RGB/Audi_Rings_Standard/Audi_Rings_wh-RGB.png"
     DEPENDENCIES
         QtQuick
         QtQuick.Controls

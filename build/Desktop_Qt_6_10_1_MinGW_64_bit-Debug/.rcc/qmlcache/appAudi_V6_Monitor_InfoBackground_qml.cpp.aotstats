@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 83,
+                            "durationMicroseconds": 103,
                             "functionName": "currentIndex",
                             "line": 25,
                             "message": "Cannot access value for name activeTab"
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 68,
+                            "durationMicroseconds": 72,
                             "functionName": "fill",
                             "line": 23,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 43,
+                            "durationMicroseconds": 49,
                             "functionName": "oilTemp",
                             "line": 29,
                             "message": ""

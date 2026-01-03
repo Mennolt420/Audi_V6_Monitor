@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 102,
+                            "durationMicroseconds": 140,
                             "functionName": "centerIn",
                             "line": 8,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 44,
+                            "durationMicroseconds": 62,
                             "functionName": "alignment",
                             "line": 19,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 24,
+                            "durationMicroseconds": 33,
                             "functionName": "centerIn",
                             "line": 23,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 36,
+                            "durationMicroseconds": 44,
                             "functionName": "style",
                             "line": 35,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 30,
+                            "durationMicroseconds": 42,
                             "functionName": "alignment",
                             "line": 34,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 26,
+                            "durationMicroseconds": 53,
                             "functionName": "style",
                             "line": 44,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 38,
+                            "durationMicroseconds": 47,
                             "functionName": "alignment",
                             "line": 43,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 32,
+                            "durationMicroseconds": 46,
                             "functionName": "style",
                             "line": 53,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 36,
+                            "durationMicroseconds": 65,
                             "functionName": "alignment",
                             "line": 52,
                             "message": ""

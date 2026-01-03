@@ -4,13 +4,10 @@ import QtQuick.Effects
 
 Item {
     id: gauge
-    // We maken de container groot genoeg voor de teller ÉN de balken eromheen
     width: 750
     height: 750
 
-    // --- CONFIGURATIE ---
-    // Dit is de straal van de HOOFDRING.
-    // 290 * 2 = 580px diameter (past makkelijk in 720px hoogte + balken)
+    // Interne maatvoering
     readonly property real ringRadius: 290
 
     property real value: 0
@@ -19,12 +16,14 @@ Item {
     property string logoText: ""
     property bool isRedline: false
     property real redlineStartIndex: 6.5
-    property alias centerContent: centerContainer.children
 
+    // Font property (wordt doorgegeven vanuit Main)
+    property string customFont: "Arial"
+
+    property alias centerContent: centerContainer.children
     property real startAngle: -130
     property real totalSweep: 260
 
-    // --- SATELLIET CONFIG ---
     property real leftValue1: 0
     property string leftIcon1: ""
     property color leftColor1: "#ffffff"
@@ -38,28 +37,19 @@ Item {
     property string rightIcon2: ""
     property color rightColor2: "#ffffff"
 
-    // =================================================================
-    // SATELLIET BALKEN (Strakker gepositioneerd)
-    // =================================================================
+    // --- SATELLIET BALKEN ---
     component SatBar: Item {
         property bool isRight: false
         property int stackIndex: 0
         property real val: 0.0
         property string icon: ""
         property color barColor: "white"
-
         visible: icon !== ""
         anchors.fill: parent
-
-        // Radius berekening: Ring + afstand
-        // Index 0 (binnen): 290 + 15 = 305
-        // Index 1 (buiten): 290 + 15 + 32 = 337
         readonly property real r: gauge.ringRadius + 15 + (stackIndex * 32)
-
         property real startAng: isRight ? 30 : 150
         property real swp: isRight ? -60 : 60
 
-        // Achtergrond
         Shape {
             anchors.fill: parent
             ShapePath {
@@ -77,16 +67,16 @@ Item {
                 }
             }
         }
-
-        // Waarde + Glow
         Shape {
             anchors.fill: parent
             layer.enabled: true
             layer.effect: MultiEffect {
                 shadowEnabled: true
                 shadowColor: barColor
-                shadowBlur: 1.0
+                shadowBlur: 0.8
                 opacity: 1.0
+                paddingRect: Qt.rect(-20, -20, parent.width + 40,
+                                     parent.height + 40)
             }
             ShapePath {
                 strokeColor: barColor
@@ -103,11 +93,9 @@ Item {
                 }
             }
         }
-
-        // Icoon
         Text {
             text: icon
-            color: "#fff"
+            color: barColor
             font.pixelSize: 20
             font.bold: true
             style: Text.Outline
@@ -116,9 +104,14 @@ Item {
                    (startAng + swp) * Math.PI / 180) - width / 2
             y: (height / 2) + (r + 28) * Math.sin(
                    (startAng + swp) * Math.PI / 180) - height / 2
+            layer.enabled: true
+            layer.effect: MultiEffect {
+                shadowEnabled: true
+                shadowColor: "black"
+                shadowBlur: 0.5
+            }
         }
     }
-
     SatBar {
         isRight: false
         stackIndex: 0
@@ -148,13 +141,9 @@ Item {
         barColor: rightColor2
     }
 
-    // =================================================================
-    // DE HOOFD TELLER
-    // =================================================================
+    // --- MAIN GAUGE ---
     Item {
         anchors.fill: parent
-
-        // Hoofdring
         Rectangle {
             width: ringRadius * 2
             height: ringRadius * 2
@@ -165,7 +154,6 @@ Item {
             border.width: 3
             opacity: 0.2
         }
-        // Binnenring
         Rectangle {
             width: (ringRadius - 20) * 2
             height: (ringRadius - 20) * 2
@@ -176,7 +164,6 @@ Item {
             border.width: 1
             opacity: 0.1
         }
-
         layer.enabled: true
         layer.effect: MultiEffect {
             shadowEnabled: true
@@ -192,14 +179,11 @@ Item {
             anchors.fill: parent
             property real anglePerStep: gauge.totalSweep / (gauge.numberArray.length - 1)
             rotation: gauge.startAngle + (index * anglePerStep)
-
-            // Positie aanpassen aan nieuwe ringRadius
             Rectangle {
-                width: 4
-                height: 20
+                width: 5
+                height: 22
                 color: (gauge.isRedline
                         && index >= gauge.redlineStartIndex) ? "#cc0000" : "white"
-                // y positie: Center (height/2) - Radius
                 y: (parent.height / 2) - ringRadius + 5
                 anchors.horizontalCenter: parent.horizontalCenter
                 antialiasing: true
@@ -212,9 +196,8 @@ Item {
                         && index >= gauge.redlineStartIndex) ? "#cc0000" : "#ffffff"
                 font.pixelSize: 32
                 font.bold: true
-                font.family: "Titillium Web"
-                // Tekst iets verder naar binnen
-                y: (parent.height / 2) - ringRadius + 40
+                font.family: gauge.customFont // GEBRUIK HET AUDI FONT
+                y: (parent.height / 2) - ringRadius + 45
                 anchors.horizontalCenter: parent.horizontalCenter
                 rotation: -parent.rotation
                 style: Text.Outline
@@ -252,8 +235,8 @@ Item {
     Item {
         id: centerContainer
         anchors.centerIn: parent
-        width: 250
-        height: 250
+        width: 300
+        height: 300
         z: 5
     }
 
@@ -263,9 +246,10 @@ Item {
         font.pixelSize: 20
         font.italic: true
         font.bold: true
+        font.family: gauge.customFont
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: (parent.height / 2) - 130 // Relatief aan midden
+        anchors.bottomMargin: (parent.height / 2) - 130
         style: Text.Outline
         styleColor: "black"
     }
@@ -276,6 +260,7 @@ Item {
         font.pixelSize: 32
         font.bold: true
         font.italic: true
+        font.family: gauge.customFont
         style: Text.Outline
         styleColor: "#cc0000"
         anchors.horizontalCenter: parent.horizontalCenter
@@ -289,7 +274,7 @@ Item {
         }
     }
 
-    // Pointer Naald
+    // Pointer
     Item {
         anchors.fill: parent
         z: 10
@@ -300,7 +285,6 @@ Item {
             }
         }
         function calculateRotation(val) {
-            /* ... zelfde logica ... */
             var arr = gauge.numberArray
             if (val <= arr[0])
                 return gauge.startAngle
@@ -317,14 +301,12 @@ Item {
             }
             return gauge.startAngle
         }
-
         Rectangle {
-            width: 16
-            height: 35
+            width: 18
+            height: 40
             color: "#ff0000"
-            radius: 2
-            // Positie op de rand van de ring
-            y: (parent.height / 2) - ringRadius - 10
+            radius: 3
+            y: (parent.height / 2) - ringRadius
             anchors.horizontalCenter: parent.horizontalCenter
             antialiasing: true
             layer.enabled: true

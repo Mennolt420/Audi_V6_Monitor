@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 259,
+                            "durationMicroseconds": 224,
                             "functionName": "gX",
                             "line": 12,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 2,
                             "column": 23,
-                            "durationMicroseconds": 128,
+                            "durationMicroseconds": 141,
                             "functionName": "gY",
                             "line": 13,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 69,
-                            "durationMicroseconds": 155,
+                            "durationMicroseconds": 209,
                             "functionName": "onTriggered",
                             "line": 16,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 39,
+                            "durationMicroseconds": 55,
                             "functionName": "centerIn",
                             "line": 19,
                             "message": ""
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 43,
+                            "durationMicroseconds": 37,
                             "functionName": "style",
                             "line": 26,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 26,
+                            "durationMicroseconds": 29,
                             "functionName": "alignment",
                             "line": 25,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 33,
+                            "durationMicroseconds": 41,
                             "functionName": "alignment",
                             "line": 32,
                             "message": ""
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 20,
+                            "durationMicroseconds": 29,
                             "functionName": "fill",
                             "line": 36,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 23,
+                            "durationMicroseconds": 27,
                             "functionName": "x",
                             "line": 70,
                             "message": "Cannot access value for name gX"
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 20,
+                            "durationMicroseconds": 23,
                             "functionName": "y",
                             "line": 71,
                             "message": "Cannot access value for name gY"
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 29,
+                            "durationMicroseconds": 50,
                             "functionName": "alignment",
                             "line": 84,
                             "message": ""
@@ -96,7 +96,7 @@
                         {
                             "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 18,
+                            "durationMicroseconds": 33,
                             "functionName": "text",
                             "line": 86,
                             "message": "Cannot access value for name gX"
@@ -104,7 +104,7 @@
                         {
                             "codegenResult": 0,
                             "column": 117,
-                            "durationMicroseconds": 37,
+                            "durationMicroseconds": 48,
                             "functionName": "style",
                             "line": 86,
                             "message": ""
@@ -112,7 +112,7 @@
                         {
                             "codegenResult": 2,
                             "column": 26,
-                            "durationMicroseconds": 17,
+                            "durationMicroseconds": 19,
                             "functionName": "text",
                             "line": 87,
                             "message": "Cannot access value for name gY"
@@ -120,7 +120,7 @@
                         {
                             "codegenResult": 0,
                             "column": 117,
-                            "durationMicroseconds": 25,
+                            "durationMicroseconds": 27,
                             "functionName": "style",
                             "line": 87,
                             "message": ""

@@ -7,22 +7,22 @@ Rectangle {
     signal tabClicked(string tabName)
     property string activeTab: "CAR"
 
+    // We laden het font hier ook, of gebruiken een system fallback
+    FontLoader {
+        id: menuFont
+        source: "assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Bold_4.03.ttf"
+    }
+
     gradient: Gradient {
-        GradientStop {
-            position: 0.0
-            color: "black"
-        }
-        GradientStop {
-            position: 1.0
-            color: "transparent"
-        }
+        GradientStop { position: 0.0; color: "black" }
+        GradientStop { position: 1.0; color: "transparent" }
     }
 
     RowLayout {
         anchors.top: parent.top
         anchors.topMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
-        spacing: 80 // Meer ruimte tussen de items nu er eentje weg is
+        spacing: 80
 
         Repeater {
             model: ["CAR", "MEDIA", "NAV"]
@@ -30,10 +30,9 @@ Rectangle {
                 text: modelData
                 color: parent.parent.activeTab === modelData ? "white" : "#666666"
                 font.pixelSize: 22
+                font.family: menuFont.status === FontLoader.Ready ? menuFont.name : "Arial"
                 font.bold: true
-                font.family: "Titillium Web"
-                style: Text.Outline
-                styleColor: "black"
+                style: Text.Outline; styleColor: "black"
 
                 MouseArea {
                     anchors.fill: parent
@@ -41,7 +40,6 @@ Rectangle {
                     onClicked: parent.parent.parent.tabClicked(modelData)
                 }
 
-                // Het rode actieve streepje
                 Rectangle {
                     visible: parent.parent.parent.activeTab === modelData
                     width: parent.width + 20
@@ -50,8 +48,6 @@ Rectangle {
                     anchors.top: parent.top
                     anchors.topMargin: -8
                     anchors.horizontalCenter: parent.horizontalCenter
-
-                    // Klein gloed effectje op het actieve balkje
                     layer.enabled: true
                 }
             }

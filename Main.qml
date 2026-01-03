@@ -9,28 +9,38 @@ Window {
     width: 1920
     height: 720
     visible: true
-    title: "Audi Virtual Cockpit - Final Fix"
+    title: "Audi Virtual Cockpit - OEM Spec"
     color: "black"
 
+    // --- FONTS LADEN (Exacte paden uit je upload) ---
     FontLoader {
-        id: fontRegular
-        source: "assets/Titillium_Web/TitilliumWeb-Regular.ttf"
+        id: audiFontNormal
+        source: "assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Normal_4.03.ttf"
     }
     FontLoader {
-        id: fontBold
-        source: "assets/Titillium_Web/TitilliumWeb-Bold.ttf"
+        id: audiFontBold
+        source: "assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Bold_4.03.ttf"
     }
 
-    // --- DATA (Dezelfde als voorheen) ---
+    // Helper properties voor makkelijk gebruik
+    property string fontMain: audiFontNormal.status
+                              === FontLoader.Ready ? audiFontNormal.name : "Arial"
+    property string fontBold: audiFontBold.status === FontLoader.Ready ? audiFontBold.name : "Arial"
+
+    // --- DATA VARIABELEN ---
     property int currentRpm: rpmSlider.value
     property int currentSpeed: speedSlider.value
-    property string currentGear: "3"
+
     property int engineTemp: 94
     property int coolTemp: 90
     property int fuelLevel: 65
+    property int load: 34
+    property double avgCons: 9.8
+
     property int pedalPos: pedalSlider.value
     property int throttlePos: throttleSlider.value
     property int range: 420
+
     property string selectedTab: "CAR"
     property string time: "14:30"
     property int odo: 145020
@@ -40,6 +50,7 @@ Window {
         id: container
         anchors.fill: parent
 
+        // 1. ACHTERGROND & MAP
         InfoBackground {
             anchors.fill: parent
             activeTab: selectedTab
@@ -47,31 +58,42 @@ Window {
             range: range
         }
 
-        // --- TELLERS (Zonder Scale, Pure Positie) ---
+        // 2. AUDI LOGO (Rings)
+        // Staat bovenin, gecentreerd, onder de TopBar
+        Image {
+            source: "assets/Audi-Rings-Digital_RGB/Web_RGB/Audi_Rings_Standard/Audi_Rings_wh-RGB.png"
+            width: 180
+            fillMode: Image.PreserveAspectFit
+            anchors.top: parent.top
+            anchors.topMargin: 90 // Net onder het menu
+            anchors.horizontalCenter: parent.horizontalCenter
+            opacity: 0.8
+            z: 5
+        }
 
-        // -- RPM (Links) --
+        // 3. TELLERS
+
+        // -- LINKS: TOERENTELLER (Met Verbruik & Load) --
         AudiGauge {
             id: rpmGauge
             anchors.verticalCenter: parent.verticalCenter
-            // Positie: De hele box (750px) staat links.
-            // Door de negatieve marge of offset zetten we het hart op de juiste plek.
-            x: 20 // 750 breed, dus hart zit op 375 + 20 = 395px van links. Perfect.
+            x: 20
 
             value: currentRpm
             label: "1/min x 1000"
+            // We geven het Audi font door
+            customFont: fontBold
             numberArray: [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]
             isRedline: true
             redlineStartIndex: 6.5
 
-            // Linker balken
+            // Satellietbalken
             leftValue1: Math.min(coolTemp, 120) / 120
             leftIcon1: "💧"
             leftColor1: coolTemp > 110 ? "#ff0000" : "white"
             leftValue2: Math.min(engineTemp, 130) / 130
             leftIcon2: "🌡️"
             leftColor2: engineTemp < 80 ? "#00ccff" : "white"
-
-            // Rechter balken
             rightValue1: throttlePos / 100
             rightIcon1: "T"
             rightColor1: "#00cc00"
@@ -79,25 +101,92 @@ Window {
             rightIcon2: "P"
             rightColor2: "#00ccff"
 
-            centerContent: Text {
-                text: currentGear
-                color: "white"
-                font.pixelSize: 120
-                font.family: fontBold.name
+            // --- CLUSTER INHOUD ---
+            centerContent: ColumnLayout {
                 anchors.centerIn: parent
-                style: Text.Outline
-                styleColor: "black"
+                spacing: -10
+
+                // Grote RPM waarde
+                Text {
+                    text: currentRpm
+                    color: currentRpm < 6500 ? "white" : "#ff0000"
+                    font.pixelSize: 90
+                    font.family: fontBold
+                    Layout.alignment: Qt.AlignHCenter
+                    style: Text.Outline
+                    styleColor: "black"
+                }
+
+                // Info rij
+                RowLayout {
+                    spacing: 30
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.topMargin: 10
+
+                    // Gemiddeld Verbruik
+                    Column {
+                        spacing: 0
+                        Text {
+                            text: "Ø L/100km"
+                            color: "#aaa"
+                            font.pixelSize: 13
+                            font.family: fontMain
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                        Text {
+                            text: avgCons.toFixed(1)
+                            color: "white"
+                            font.pixelSize: 24
+                            font.family: fontBold
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                    }
+
+                    Rectangle {
+                        width: 1
+                        height: 30
+                        color: "#666"
+                    }
+
+                    // Motor Belasting
+                    Column {
+                        spacing: 0
+                        Text {
+                            text: "LOAD"
+                            color: "#aaa"
+                            font.pixelSize: 13
+                            font.family: fontMain
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                        Text {
+                            text: load + "%"
+                            color: "white"
+                            font.pixelSize: 24
+                            font.family: fontBold
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                    }
+                }
             }
         }
 
-        // -- SNELHEID (Rechts) --
+        // -- RECHTS: SNELHEID (Met Range & Trip) --
         AudiGauge {
             id: speedGauge
             anchors.verticalCenter: parent.verticalCenter
-            x: parent.width - width - 20 // Symmetrisch rechts
+            x: parent.width - width - 20
 
             value: currentSpeed
             label: "km/h"
+            customFont: fontBold
             numberArray: [0, 20, 40, 60, 80, 100, 120, 140, 170, 200, 240, 280]
             isRedline: false
 
@@ -105,28 +194,96 @@ Window {
             rightIcon2: "⛽"
             rightColor2: fuelLevel < 15 ? "#ff0000" : "white"
 
-            centerContent: Text {
-                text: currentSpeed
-                color: "white"
-                font.pixelSize: 100
-                font.family: fontBold.name
+            // --- CLUSTER INHOUD ---
+            centerContent: ColumnLayout {
                 anchors.centerIn: parent
-                style: Text.Outline
-                styleColor: "black"
+                spacing: -10
+
+                // Grote Snelheid
+                Text {
+                    text: currentSpeed
+                    color: "white"
+                    font.pixelSize: 110
+                    font.family: fontBold
+                    Layout.alignment: Qt.AlignHCenter
+                    style: Text.Outline
+                    styleColor: "black"
+                }
+
+                // Info Rij
+                RowLayout {
+                    spacing: 30
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.topMargin: 10
+
+                    // Actieradius (Rechts, zoals gevraagd)
+                    Column {
+                        spacing: 0
+                        Text {
+                            text: "RANGE"
+                            color: "#aaa"
+                            font.pixelSize: 13
+                            font.family: fontMain
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                        Text {
+                            text: range + " km"
+                            color: "#00ccff"
+                            font.pixelSize: 24
+                            font.family: fontBold
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                    }
+
+                    Rectangle {
+                        width: 1
+                        height: 30
+                        color: "#666"
+                    }
+
+                    // Dagtoerenteller
+                    Column {
+                        spacing: 0
+                        Text {
+                            text: "TRIP"
+                            color: "#aaa"
+                            font.pixelSize: 13
+                            font.family: fontMain
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                        Text {
+                            text: trip.toFixed(1)
+                            color: "white"
+                            font.pixelSize: 24
+                            font.family: fontBold
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            style: Text.Outline
+                            styleColor: "black"
+                        }
+                    }
+                }
             }
         }
 
-        // 3. MENU BALK
+        // 3. TOP MENU
         TopBar {
             width: parent.width
             anchors.top: parent.top
             activeTab: selectedTab
+            // We kunnen font doorgeven als property indien TopBar aangepast wordt,
+            // maar voor nu gebruikt TopBar zijn eigen font definitie (zie bestand 4).
             onTabClicked: name => {
                               selectedTab = name
                           }
         }
 
-        // 4. STATUS BALK
+        // 4. ONDER BALK
         Rectangle {
             width: parent.width
             height: 60
@@ -146,7 +303,7 @@ Window {
                     text: time
                     color: "white"
                     font.pixelSize: 22
-                    font.family: fontBold.name
+                    font.family: fontBold
                     style: Text.Outline
                     styleColor: "black"
                 }
@@ -154,7 +311,7 @@ Window {
                     text: "+12.5°C"
                     color: "white"
                     font.pixelSize: 22
-                    font.family: fontRegular.name
+                    font.family: fontMain
                     style: Text.Outline
                     styleColor: "black"
                 }
@@ -178,10 +335,10 @@ Window {
                     Layout.fillWidth: true
                 }
                 Text {
-                    text: "Trip " + trip.toFixed(1)
+                    text: "Total"
                     color: "#888"
                     font.pixelSize: 18
-                    font.family: fontRegular.name
+                    font.family: fontMain
                     style: Text.Outline
                     styleColor: "black"
                 }
@@ -189,7 +346,7 @@ Window {
                     text: odo + " km"
                     color: "white"
                     font.pixelSize: 22
-                    font.family: fontBold.name
+                    font.family: fontBold
                     style: Text.Outline
                     styleColor: "black"
                 }
@@ -197,7 +354,7 @@ Window {
         }
     }
 
-    // Test Panel
+    // TEST PANEL
     Rectangle {
         width: 600
         height: 120
@@ -209,7 +366,7 @@ Window {
             anchors.fill: parent
             hoverEnabled: true
             onEntered: parent.opacity = 0.9
-            onExited: parent.opacity = 0.0
+            onExited: parent.opacity = 0.9
         }
         GridLayout {
             columns: 2

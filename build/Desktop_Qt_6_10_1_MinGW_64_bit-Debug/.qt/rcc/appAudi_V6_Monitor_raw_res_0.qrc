@@ -1,7 +1,8 @@
 <RCC>
   <qresource prefix="/qt/qml/Audi_V6_Monitor/">
-    <file alias="assets/Titillium_Web/TitilliumWeb-Regular.ttf">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Titillium_Web/TitilliumWeb-Regular.ttf</file>
-    <file alias="assets/Titillium_Web/TitilliumWeb-Bold.ttf">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Titillium_Web/TitilliumWeb-Bold.ttf</file>
+    <file alias="assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Normal_4.03.ttf">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Normal_4.03.ttf</file>
+    <file alias="assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Bold_4.03.ttf">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Audi_Type_Digital_20210706/Audi Type Digital/AudiType v4.03 TrueType OpenType/AudiType-Bold_4.03.ttf</file>
+    <file alias="assets/Audi-Rings-Digital_RGB/Web_RGB/Audi_Rings_Standard/Audi_Rings_wh-RGB.png">C:/Users/Mennolt/Qtprojects/Audi_V6_Monitor/assets/Audi-Rings-Digital_RGB/Web_RGB/Audi_Rings_Standard/Audi_Rings_wh-RGB.png</file>
   </qresource>
 </RCC>
 
